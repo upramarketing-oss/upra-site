@@ -47,8 +47,7 @@ export default function SobrePage() {
               <p>
                 Somos uma equipa pequena, focada e independente. Cada projeto
                 é tratado de ponta a ponta pelas mesmas pessoas que falam
-                consigo — sem subcontratações, sem intermediários, sem
-                agendas escondidas.
+                consigo.
               </p>
               <p>
                 Acreditamos que ter presença online não devia ser um luxo nem
