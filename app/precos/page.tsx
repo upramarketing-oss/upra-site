@@ -72,7 +72,7 @@ export default function PrecosPage() {
       {/* HERO */}
       <section className="px-5 sm:px-6 lg:px-10 pt-10 lg:pt-24 pb-12 lg:pb-20">
         <div className="mx-auto max-w-[1320px]">
-          <div className="label mb-8">Investimento</div>
+          <div className="label mb-8">Preços</div>
           <h1 className="display-tight text-[clamp(44px,9vw,140px)] leading-[0.95] max-w-[14ch]">
             Preço claro,{" "}
             <span className="text-blue">desde o início.</span>
