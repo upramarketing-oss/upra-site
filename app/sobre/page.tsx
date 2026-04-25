@@ -20,8 +20,8 @@ export default function SobrePage() {
             A UPRA existe por um <span className="text-blue">motivo simples.</span>
           </h1>
           <p className="mt-10 text-lg lg:text-2xl text-ink/80 leading-relaxed max-w-2xl">
-            Demasiados bons negócios em Portugal continuam invisíveis online.
-            Queremos mudar isso!
+            Muitos negócios em Portugal ainda são invisíveis no digital. Mas
+            nós chegamos com a solução!
           </p>
         </div>
       </section>
