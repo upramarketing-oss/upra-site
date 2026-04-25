@@ -11,7 +11,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 1.0,
     },
-{
+    {
+      url: `${base}/precos`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${base}/sobre`,
       lastModified,
       changeFrequency: "monthly",

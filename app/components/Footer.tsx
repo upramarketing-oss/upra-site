@@ -15,6 +15,7 @@ const FOOTER_LINKS = [
   {
     heading: "Empresa",
     links: [
+      { label: "Preços", href: "/precos" },
       { label: "Trabalho", href: "/trabalho" },
       { label: "Sobre", href: "/sobre" },
     ],
