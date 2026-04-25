@@ -29,7 +29,7 @@ const TIERS = [
     title: "Site Institucional",
     tagline: "A casa do seu negócio na web.",
     price: "890",
-    timeline: "4–7 dias",
+    timeline: "1–2 semanas",
     features: [
       "Páginas: Home, Sobre, Serviços, Contacto",
       "Blog ou área de notícias",
