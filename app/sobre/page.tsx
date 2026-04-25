@@ -9,7 +9,7 @@ export default function SobrePage() {
           Quem está <em>por trás.</em>
         </h1>
         <p className="mt-12 text-xl text-ink/70 max-w-2xl leading-relaxed">
-          A UPRA Marketing nasceu para ajudar negócios locais portugueses a
+          A UPRA nasceu para ajudar negócios locais portugueses a
           existir online. Sem complicação, sem jargão, sem soluções enlatadas.
           Esta página vai contar mais sobre como trabalhamos e em que
           acreditamos.

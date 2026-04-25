@@ -27,7 +27,7 @@ export function Header() {
       <div className="mx-auto max-w-[1320px] px-6 lg:px-10 h-[88px] flex items-center justify-between gap-6">
         <Link
           href="/"
-          aria-label="UPRA Marketing · Início"
+          aria-label="UPRA · Início"
           className="flex items-center gap-3 group"
         >
           <Logo className="h-14 lg:h-[88px] w-auto" />

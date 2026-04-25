@@ -27,13 +27,13 @@ const jbMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://upra.pt"),
   title: {
-    default: "UPRA Marketing · Websites para negócios reais",
-    template: "%s · UPRA Marketing",
+    default: "UPRA · Websites para negócios reais",
+    template: "%s · UPRA",
   },
   description:
     "Construímos a presença digital de PMEs locais. Websites, lojas online e identidade visual para negócios que ainda dependem do passa-palavra.",
   openGraph: {
-    title: "UPRA Marketing · Websites para negócios reais",
+    title: "UPRA · Websites para negócios reais",
     description:
       "Construímos a presença digital de PMEs locais. Websites, lojas online e identidade visual.",
     locale: "pt_PT",
