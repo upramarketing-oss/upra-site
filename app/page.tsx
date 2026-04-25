@@ -246,7 +246,10 @@ export default function HomePage() {
       </section>
 
       {/* ============== CONTACT FORM ============== */}
-      <section className="border-t border-rule px-5 sm:px-6 lg:px-10 py-16 lg:py-24 bg-bg-soft">
+      <section
+        id="formulario"
+        className="border-t border-rule px-5 sm:px-6 lg:px-10 py-16 lg:py-24 bg-bg-soft scroll-mt-8"
+      >
         <div className="mx-auto max-w-[1320px]">
           <div className="bg-bg-bright border border-rule rounded-2xl p-6 sm:p-8 lg:p-12 grid lg:grid-cols-12 gap-8 lg:gap-16">
             <div className="lg:col-span-5">

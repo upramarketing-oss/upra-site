@@ -207,7 +207,7 @@ export default function SobrePage() {
                 Marcar reunião <span className="arrow">→</span>
               </a>
               <Link
-                href="/contacto"
+                href="/#formulario"
                 className="inline-flex items-center gap-2 px-6 py-4 border border-bg-bright/30 text-bg-bright rounded-full hover:bg-bg-bright hover:text-ink transition-colors"
               >
                 Formulário
