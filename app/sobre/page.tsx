@@ -31,7 +31,6 @@ export default function SobrePage() {
         <div className="mx-auto max-w-[1320px]">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
             <div className="lg:col-span-4">
-              <div className="label mb-4">Quem somos</div>
               <h2 className="display text-3xl md:text-4xl lg:text-5xl leading-tight">
                 Uma agência pequena.{" "}
                 <span className="text-blue">Foco grande.</span>
