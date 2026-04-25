@@ -21,7 +21,7 @@ export default function SobrePage() {
           </h1>
           <p className="mt-10 text-lg lg:text-2xl text-ink/80 leading-relaxed max-w-2xl">
             Demasiados bons negócios em Portugal continuam invisíveis online.
-            Queremos mudar isso — um site de cada vez.
+            Queremos mudar isso!
           </p>
         </div>
       </section>
