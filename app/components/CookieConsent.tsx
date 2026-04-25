@@ -117,8 +117,8 @@ export function CookieConsent() {
             Cookies, mas só os necessários.
           </h3>
           <p className="text-sm text-mute leading-relaxed mb-5">
-            Usamos cookies para melhorar a tua experiência no site. Podes
-            aceitar todos, rejeitar, ou personalizar o que permites.
+            Usamos cookies para melhorar a sua experiência no site. Pode
+            aceitar todos, rejeitar, ou personalizar o que permite.
           </p>
           <div className="flex flex-col sm:flex-row gap-2">
             <button

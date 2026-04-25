@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-// Web3Forms — serviço gratuito que recebe submissões e envia para o teu email.
+// Web3Forms — serviço gratuito que recebe submissões e envia para o email configurado.
 // 1. Cria conta em https://web3forms.com (basta o email — gratuito, sem cartão).
 // 2. Copia a "Access Key" do dashboard.
 // 3. Cria ficheiro .env.local na raiz do projeto com:
@@ -58,7 +58,7 @@ export function ContactForm() {
     } catch {
       setStatus("error");
       setErrorMessage(
-        "Erro de ligação. Verifica a tua internet e tenta novamente."
+        "Erro de ligação. Verifique a sua internet e tente novamente."
       );
     }
   };

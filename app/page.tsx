@@ -45,8 +45,8 @@ const WEBSITE_INCLUDED = [
   "Mobile-first (rápido em telemóvel)",
   "SEO local (Google, Maps e Reviews)",
   "Formulário com integração WhatsApp ou email",
-  "Analytics para saber quem te visita",
-  "Painel simples para editares texto e imagens",
+  "Analytics para saber quem visita o site",
+  "Painel simples para editar texto e imagens",
   "Hosting e domínio configurados por nós",
   "Certificado SSL (cadeado verde) incluído",
   "Suporte 30 dias após lançamento",
@@ -78,7 +78,7 @@ export default function HomePage() {
       <section className="px-5 sm:px-6 lg:px-10 pt-10 lg:pt-24 pb-16 lg:pb-32">
         <div className="mx-auto max-w-[1320px]">
           <h1 className="display-tight text-[clamp(40px,10vw,160px)] max-w-[15ch] leading-[0.95]">
-            Websites que fazem o teu negócio{" "}
+            Websites que fazem o seu negócio{" "}
             <span className="text-blue">aparecer.</span>
           </h1>
 
@@ -255,10 +255,10 @@ export default function HomePage() {
             <div className="lg:col-span-5">
               <div className="label mb-4">Formulário</div>
               <h2 className="display-tight text-3xl md:text-4xl lg:text-5xl mb-5 leading-[0.95]">
-                Conta-nos sobre o teu projeto.
+                Conte-nos sobre o seu projeto.
               </h2>
               <p className="text-mute leading-relaxed max-w-sm">
-                Preenche o formulário e respondemos em breve. Sem compromisso.
+                Preencha o formulário e respondemos em breve. Sem compromisso.
               </p>
               <div className="mt-8 pt-6 border-t border-rule">
                 <div className="label mb-2">Ou diretamente</div>

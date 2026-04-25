@@ -32,7 +32,7 @@ export function WhatsAppPopup() {
         </div>
 
         <p className="text-sm text-ink/85 leading-relaxed mb-4">
-          Olá. Tens dúvidas ou queres começar um projeto? Falamos diretamente
+          Olá. Tem dúvidas ou quer começar um projeto? Falamos diretamente
           por WhatsApp.
         </p>
 
