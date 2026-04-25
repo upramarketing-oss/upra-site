@@ -14,7 +14,7 @@ const TIERS = [
     title: "Landing Page",
     tagline: "Página única, focada em converter.",
     price: "390",
-    timeline: "5–7 dias",
+    timeline: "2–5 dias",
     features: [
       "Página única (Hero + CTA + Provas)",
       "Formulário de captação",
@@ -29,7 +29,7 @@ const TIERS = [
     title: "Site Institucional",
     tagline: "A casa do seu negócio na web.",
     price: "890",
-    timeline: "1–3 semanas",
+    timeline: "4–7 dias",
     features: [
       "Páginas: Home, Sobre, Serviços, Contacto",
       "Blog ou área de notícias",
