@@ -73,7 +73,7 @@ export default function PrecosPage() {
       <section className="px-5 sm:px-6 lg:px-10 pt-10 lg:pt-24 pb-12 lg:pb-20">
         <div className="mx-auto max-w-[1320px]">
           <div className="label mb-8">Preços</div>
-          <h1 className="display-tight text-[clamp(44px,9vw,140px)] leading-[0.95] max-w-[14ch]">
+          <h1 className="display-tight text-[clamp(44px,9vw,140px)] leading-[1.05] max-w-[14ch]">
             Preço claro,{" "}
             <span className="text-blue">desde o início.</span>
           </h1>
@@ -174,31 +174,42 @@ export default function PrecosPage() {
           </div>
 
           {/* Notas sobre orçamento */}
-          <div className="mt-10 lg:mt-14 bg-bg-bright border border-rule rounded-2xl p-6 lg:p-9 grid lg:grid-cols-12 gap-6 lg:gap-10">
-            <div className="lg:col-span-5">
+          <div className="mt-10 lg:mt-14 bg-bg-bright border border-rule rounded-2xl p-7 sm:p-8 lg:p-12">
+            {/* Intro */}
+            <div className="max-w-3xl mb-10 lg:mb-14">
               <div className="label mb-3">O que faz variar o orçamento</div>
-              <h2 className="display text-2xl lg:text-3xl leading-tight">
-                &quot;A partir de&quot; é o ponto de entrada.
+              <h2 className="display-tight text-3xl md:text-4xl lg:text-5xl mb-4 leading-tight">
+                &quot;A partir de&quot; é o{" "}
+                <span className="text-blue">ponto de entrada.</span>
               </h2>
+              <p className="text-ink/75 text-lg leading-relaxed">
+                O valor final do projeto depende destes 4 fatores:
+              </p>
             </div>
-            <div className="lg:col-span-7">
-              <p className="text-ink/80 leading-relaxed mb-5">
-                O valor final do projeto depende sempre destes fatores:
+
+            {/* 4 fatores numerados em linha */}
+            <ol className="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-7">
+              {ASSUMPTIONS.map((a, i) => (
+                <li key={a} className="border-l-2 border-blue pl-5">
+                  <div className="display text-2xl lg:text-3xl text-blue mb-2 font-bold leading-none">
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
+                  <p className="text-ink/85 leading-snug text-[15px] lg:text-base">
+                    {a}
+                  </p>
+                </li>
+              ))}
+            </ol>
+
+            {/* 48h promise */}
+            <div className="mt-10 lg:mt-14 pt-6 border-t border-rule flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-3">
+              <p className="text-ink font-medium text-lg">
+                Receberá o orçamento personalizado e por escrito em{" "}
+                <span className="text-blue">até 48 horas</span>.
               </p>
-              <ul className="space-y-2">
-                {ASSUMPTIONS.map((a) => (
-                  <li
-                    key={a}
-                    className="flex items-start gap-3 text-ink/85 text-[15px] lg:text-base"
-                  >
-                    <span className="text-blue mt-0.5 shrink-0">·</span>
-                    <span>{a}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-6 text-mute text-sm">
-                Receberá o orçamento personalizado e por escrito em 48 horas.
-              </p>
+              <span className="font-mono text-xs text-mute uppercase tracking-widest shrink-0">
+                Sem compromisso
+              </span>
             </div>
           </div>
         </div>
