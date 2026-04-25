@@ -93,7 +93,7 @@ export default function EquipaPage() {
             <span className="text-blue">desenvolve</span>. Quem desenvolve é
             quem <span className="text-blue">fala consigo</span>.
             <span className="block text-mute font-normal text-xl md:text-2xl lg:text-3xl mt-6">
-              Sem intermediários, sem mistério.
+              É essa proximidade que faz a diferença.
             </span>
           </blockquote>
         </div>
