@@ -1,0 +1,82 @@
+// TODO: substituir pelo número real (351 + 9 dígitos, sem espaços nem +)
+const WHATSAPP_NUMBER = "351912345678";
+const PRESET_MESSAGE =
+  "Olá! Vi o vosso site e queria saber mais sobre os serviços.";
+
+const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+  PRESET_MESSAGE
+)}`;
+
+/**
+ * Floating WhatsApp button (sempre visível, canto inferior-direito).
+ * Ao passar o rato, expande mostrando um cartão de pré-conversa.
+ */
+export function WhatsAppPopup() {
+  return (
+    <div className="fixed bottom-6 right-6 z-[90] group">
+      {/* Popup card — absoluto acima do botão, só visível ao hover */}
+      <div className="absolute bottom-[calc(100%+12px)] right-0 w-[340px] max-w-[calc(100vw-3rem)] opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 bg-bg-bright border border-rule rounded-2xl shadow-2xl p-5 pointer-events-none group-hover:pointer-events-auto origin-bottom-right">
+        <div className="flex items-start gap-3 mb-4">
+          <div className="w-11 h-11 rounded-full bg-blue text-bg-bright flex items-center justify-center font-display font-bold text-sm shrink-0">
+            U
+          </div>
+          <div className="flex-1 min-w-0">
+            <h4 className="font-display font-bold text-base leading-tight">
+              Equipa UPRA
+            </h4>
+            <p className="text-xs text-mute mt-0.5 flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue inline-block" />
+              Em linha agora
+            </p>
+          </div>
+        </div>
+
+        <p className="text-sm text-ink/85 leading-relaxed mb-4">
+          Olá. Tens dúvidas ou queres começar um projeto? Falamos diretamente
+          por WhatsApp.
+        </p>
+
+        <a
+          href={waLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-blue text-white rounded-full text-sm font-medium hover:bg-blue-deep transition-colors"
+        >
+          <WhatsAppIcon size={18} />
+          <span>Falar no WhatsApp</span>
+        </a>
+      </div>
+
+      {/* Bridge transparente — só ativo no hover, mantém hover ao atravessar o gap entre botão e popup */}
+      <div
+        aria-hidden="true"
+        className="absolute right-0 bottom-full h-3 w-[340px] max-w-[calc(100vw-3rem)] pointer-events-none group-hover:pointer-events-auto"
+      />
+
+      {/* Botão flutuante — sempre visível */}
+      <a
+        href={waLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Falar no WhatsApp"
+        className="relative block w-14 h-14 rounded-full bg-blue text-white items-center justify-center shadow-xl hover:scale-110 hover:bg-blue-deep transition-all flex"
+      >
+        <WhatsAppIcon size={28} />
+      </a>
+    </div>
+  );
+}
+
+function WhatsAppIcon({ size = 20 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884M20.463 3.488A11.815 11.815 0 0012.05.075C5.495.075.16 5.41.157 11.967c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  );
+}
