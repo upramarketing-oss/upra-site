@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contacto",
   description:
-    "Vamos conversar? 20 minutos, sem compromisso, em português. Email upramarketing@gmail.com — respondemos em breve.",
+    "Vamos conversar? 20 minutos, sem compromisso, em português. Email geral@upramarketing.pt — respondemos em breve.",
   alternates: { canonical: "https://upra.pt/contacto" },
 };
 
@@ -27,10 +27,10 @@ export default function ContactoPage() {
               <div>
                 <div className="label mb-2">Email</div>
                 <a
-                  href="mailto:upramarketing@gmail.com"
+                  href="mailto:geral@upramarketing.pt"
                   className="font-display text-3xl md:text-4xl link-line hover:text-electric transition-colors"
                 >
-                  upramarketing@gmail.com
+                  geral@upramarketing.pt
                 </a>
               </div>
               <div>

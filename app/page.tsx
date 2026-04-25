@@ -260,10 +260,10 @@ export default function HomePage() {
               <div className="mt-8 pt-6 border-t border-rule">
                 <div className="label mb-2">Ou diretamente</div>
                 <a
-                  href="mailto:upramarketing@gmail.com"
+                  href="mailto:geral@upramarketing.pt"
                   className="font-mono text-sm text-blue hover:text-blue-deep link-line"
                 >
-                  upramarketing@gmail.com
+                  geral@upramarketing.pt
                 </a>
               </div>
             </div>

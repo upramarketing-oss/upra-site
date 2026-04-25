@@ -105,7 +105,7 @@ const jsonLd = {
   logo: "https://upra.pt/upra-logo.png",
   image: "https://upra.pt/upra-logo.png",
   description: SITE_DESCRIPTION,
-  email: "upramarketing@gmail.com",
+  email: "geral@upramarketing.pt",
   priceRange: "€€",
   address: {
     "@type": "PostalAddress",

@@ -86,10 +86,10 @@ export function Footer() {
               locais em Portugal.
             </p>
             <a
-              href="mailto:upramarketing@gmail.com"
+              href="mailto:geral@upramarketing.pt"
               className="mt-5 inline-block font-mono text-sm text-blue hover:text-blue-deep link-line"
             >
-              upramarketing@gmail.com
+              geral@upramarketing.pt
             </a>
           </div>
         </div>
