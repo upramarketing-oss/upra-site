@@ -62,7 +62,7 @@ const TIERS = [
 const ASSUMPTIONS = [
   "Número de páginas ou produtos finais",
   "Conteúdo a integrar (texto, fotografia profissional)",
-  "Integrações específicas (Calendly, CRM, ERP, etc.)",
+  "Integrações específicas (Calendly, CRM, etc.)",
   "Identidade visual existente ou a criar",
 ];
 
@@ -177,13 +177,14 @@ export default function PrecosPage() {
           <div className="mt-10 lg:mt-14 bg-bg-bright border border-rule rounded-2xl p-7 sm:p-8 lg:p-12">
             {/* Intro */}
             <div className="max-w-3xl mb-10 lg:mb-14">
-              <div className="label mb-3">O que faz variar o orçamento</div>
+              <div className="label mb-3">Como calculamos</div>
               <h2 className="display-tight text-3xl md:text-4xl lg:text-5xl mb-4 leading-tight">
-                &quot;A partir de&quot; é o{" "}
-                <span className="text-blue">ponto de entrada.</span>
+                O preço final depende destes{" "}
+                <span className="text-blue">4 fatores.</span>
               </h2>
               <p className="text-ink/75 text-lg leading-relaxed">
-                O valor final do projeto depende destes 4 fatores:
+                Os valores acima são o ponto de partida. O orçamento final
+                ajusta-se a cada projeto.
               </p>
             </div>
 
