@@ -177,7 +177,7 @@ export default function PrecosPage() {
           </div>
 
           {/* Design + logo callout — incluído em qualquer escalão */}
-          <article className="mt-10 lg:mt-14 bg-bg-bright border border-rule rounded-2xl p-7 sm:p-8 lg:p-12 hover:border-blue transition-colors">
+          <article className="relative mt-12 lg:mt-16 bg-blue-soft border-2 border-blue rounded-2xl p-7 sm:p-8 lg:p-12 shadow-2xl shadow-blue/20 lg:-translate-y-2 transition-transform hover:-translate-y-3">
             <span className="label !text-blue !tracking-widest mb-5 inline-block">
               + Incluído em qualquer escalão
             </span>
