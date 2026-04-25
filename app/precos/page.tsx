@@ -204,7 +204,7 @@ export default function PrecosPage() {
             {/* 48h promise */}
             <div className="mt-10 lg:mt-14 pt-6 border-t border-rule flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-3">
               <p className="text-ink font-medium text-lg">
-                Receberá o orçamento personalizado e por escrito em{" "}
+                Receberá o orçamento personalizado e por escrito{" "}
                 <span className="text-blue">até 48 horas</span>.
               </p>
               <span className="font-mono text-xs text-mute uppercase tracking-widest shrink-0">
