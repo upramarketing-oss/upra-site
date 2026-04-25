@@ -54,7 +54,7 @@ export default function SobrePage() {
                 uma dor de cabeça. Trabalhamos para que cada cliente receba
                 um site <span className="text-ink font-medium">rápido</span>,{" "}
                 <span className="text-ink font-medium">claro</span>, e que faça
-                exatamente o que era esperado.
+                correspondência ao esperado.
               </p>
             </div>
           </div>
