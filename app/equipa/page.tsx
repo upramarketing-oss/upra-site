@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import type { Metadata } from "next";
 import { WA_MEETING } from "../lib/contact";
+import { FounderPhoto } from "../components/FounderPhoto";
 
 export const metadata: Metadata = {
   title: "Equipa",
@@ -33,24 +33,13 @@ export default function EquipaPage() {
       <section className="border-t border-rule px-5 sm:px-6 lg:px-10 py-16 lg:py-28 bg-bg-soft">
         <div className="mx-auto max-w-[1320px]">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-            {/* Foto */}
+            {/* Foto — substituir public/joao.png pela foto real */}
             <div className="lg:col-span-5 order-1 lg:order-1">
-              <div className="relative aspect-[4/5] max-w-md mx-auto lg:mx-0 rounded-3xl overflow-hidden bg-blue/10 border border-rule">
-                {/* Foto: substituir public/joao.png pela foto real */}
-                <img
-                  src="/joao.png"
-                  alt="João Ferreira, fundador da UPRA"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  onError={(e) => {
-                    (e.currentTarget as HTMLImageElement).style.display =
-                      "none";
-                  }}
-                />
-                {/* Fallback se a foto não existir */}
-                <div className="absolute inset-0 flex items-center justify-center font-display font-bold text-blue text-9xl select-none">
-                  JF
-                </div>
-              </div>
+              <FounderPhoto
+                src="/joao.png"
+                alt="João Ferreira, fundador da UPRA"
+                fallback="JF"
+              />
             </div>
 
             {/* Bio */}
