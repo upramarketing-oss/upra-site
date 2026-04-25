@@ -190,7 +190,7 @@ export default function SobrePage() {
                 Próximo passo
               </div>
               <h2 className="display-tight text-3xl md:text-5xl lg:text-6xl leading-[0.95]">
-                Conta-nos sobre o teu negócio.
+                Vamos falar sobre o seu futuro site.
               </h2>
               <p className="mt-5 text-lg text-bg-bright/70 max-w-xl leading-relaxed">
                 Entre em contacto connosco e leve o seu negócio para o digital
