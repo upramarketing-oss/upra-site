@@ -79,7 +79,7 @@ export default function PrecosPage() {
           </h1>
           <p className="mt-8 lg:mt-10 text-lg lg:text-2xl text-ink/80 leading-relaxed max-w-2xl">
             Três pontos de partida para qualquer negócio. O orçamento final é
-            sempre personalizado e entregue em 48 horas após o seu pedido.
+            sempre personalizado e entregue até 48 horas após o seu pedido.
           </p>
         </div>
       </section>
