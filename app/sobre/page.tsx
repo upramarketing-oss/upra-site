@@ -31,25 +31,31 @@ export default function SobrePage() {
         <div className="mx-auto max-w-[1320px]">
           <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
             <div className="lg:col-span-4">
-              <div className="label mb-4">A história</div>
+              <div className="label mb-4">Quem somos</div>
               <h2 className="display text-3xl md:text-4xl lg:text-5xl leading-tight">
-                Vimos uma falha, e decidimos preenchê-la.
+                Uma agência pequena.{" "}
+                <span className="text-blue">Foco grande.</span>
               </h2>
             </div>
             <div className="lg:col-span-7 lg:col-start-6 space-y-5 text-lg lg:text-xl text-ink/80 leading-relaxed">
               <p>
-                Há demasiada gente em Portugal a vender presença digital sem
-                saber o que faz. Templates copiados, promessas vazias,
-                contratos com letra miúda.
+                A UPRA é uma agência digital portuguesa, dedicada a criar
+                presença online para pequenas e médias empresas. Construímos
+                websites, lojas online e identidade visual para negócios que
+                ainda não têm o seu lugar no Google.
               </p>
               <p>
-                E há demasiados bons negócios — restaurantes, lojas, oficinas,
-                profissionais — que continuam invisíveis no Google porque
-                ninguém lhes explicou simplesmente o que precisam de ter.
+                Somos uma equipa pequena, focada e independente. Cada projeto
+                é tratado de ponta a ponta pelas mesmas pessoas que falam
+                contigo — sem subcontratações, sem intermediários, sem
+                agendas escondidas.
               </p>
-              <p className="text-ink font-medium">
-                A UPRA está aqui para mudar isto.{" "}
-                <span className="text-blue">Sem jargão, sem subcontratações, sem teatro.</span>
+              <p>
+                Acreditamos que ter presença online não devia ser um luxo nem
+                uma dor de cabeça. Trabalhamos para que cada cliente receba
+                um site <span className="text-ink font-medium">rápido</span>,{" "}
+                <span className="text-ink font-medium">claro</span>, e que faça
+                exatamente o que era esperado.
               </p>
             </div>
           </div>
