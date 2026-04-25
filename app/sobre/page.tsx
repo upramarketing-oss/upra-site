@@ -147,40 +147,6 @@ export default function SobrePage() {
         </div>
       </section>
 
-      {/* ABORDAGEM TÉCNICA */}
-      <section className="border-t border-rule px-5 sm:px-6 lg:px-12 py-16 lg:py-28">
-        <div className="mx-auto max-w-[1320px]">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-            <div className="lg:col-span-5">
-              <div className="label mb-4">Como construímos</div>
-              <h2 className="display-tight text-3xl md:text-4xl lg:text-5xl leading-tight">
-                Sem WordPress.{" "}
-                <span className="text-blue">Sem templates.</span>
-              </h2>
-            </div>
-            <div className="lg:col-span-7 space-y-5 text-lg lg:text-xl text-ink/80 leading-relaxed">
-              <p>
-                Cada site é construído à medida do negócio. Em código moderno,
-                não em plataformas que adicionam camadas de plugins lentos e
-                vulnerabilidades.
-              </p>
-              <p>
-                <span className="text-ink font-medium">
-                  Mobile-first
-                </span>{" "}
-                porque é onde os teus clientes te procuram.{" "}
-                <span className="text-ink font-medium">SEO desde o primeiro código</span>{" "}
-                porque aparecer no Google não é extra.{" "}
-                <span className="text-ink font-medium">
-                  Performance no topo
-                </span>{" "}
-                porque cada segundo a carregar custa-te clientes.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="border-t border-rule px-5 sm:px-6 lg:px-12 py-16 lg:py-24 bg-ink text-bg-bright">
         <div className="mx-auto max-w-[1320px]">
