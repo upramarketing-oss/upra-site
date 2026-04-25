@@ -1,4 +1,12 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Trabalho",
+  description:
+    "Os primeiros casos de websites desenhados pela UPRA para PMEs portuguesas vão aparecer aqui. Sê dos primeiros a ter o teu negócio destacado.",
+  alternates: { canonical: "https://upra.pt/trabalho" },
+};
 
 export default function TrabalhoPage() {
   return (

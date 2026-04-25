@@ -1,4 +1,12 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sobre",
+  description:
+    "A UPRA nasceu para ajudar negócios locais portugueses a existir online. Sem complicação, sem jargão, sem soluções enlatadas.",
+  alternates: { canonical: "https://upra.pt/sobre" },
+};
 
 export default function SobrePage() {
   return (

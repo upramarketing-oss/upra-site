@@ -1,4 +1,12 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contacto",
+  description:
+    "Vamos conversar? 20 minutos, sem compromisso, em português. Email upramarketing@gmail.com — respondemos em breve.",
+  alternates: { canonical: "https://upra.pt/contacto" },
+};
 
 export default function ContactoPage() {
   return (

@@ -1,4 +1,12 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Equipa",
+  description:
+    "Pequena, focada e portuguesa. Cada projeto é tratado pelas mesmas pessoas que falam consigo, do briefing ao lançamento. Sem subcontratações.",
+  alternates: { canonical: "https://upra.pt/equipa" },
+};
 
 export default function EquipaPage() {
   return (
