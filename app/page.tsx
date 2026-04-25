@@ -75,15 +75,15 @@ export default function HomePage() {
   return (
     <>
       {/* ============== HERO ============== */}
-      <section className="px-6 lg:px-10 pt-16 lg:pt-24 pb-24 lg:pb-32">
+      <section className="px-5 sm:px-6 lg:px-10 pt-10 lg:pt-24 pb-16 lg:pb-32">
         <div className="mx-auto max-w-[1320px]">
-          <h1 className="display-tight text-[clamp(48px,9.5vw,160px)] max-w-[15ch]">
+          <h1 className="display-tight text-[clamp(40px,10vw,160px)] max-w-[15ch] leading-[0.95]">
             Websites que fazem o teu negócio{" "}
             <span className="text-blue">aparecer.</span>
           </h1>
 
-          <div className="mt-12 lg:mt-16 grid lg:grid-cols-12 gap-10 items-end">
-            <p className="lg:col-span-6 text-[22px] lg:text-[26px] leading-relaxed text-ink/85 max-w-[44ch]">
+          <div className="mt-8 lg:mt-16 grid lg:grid-cols-12 gap-6 lg:gap-10 lg:items-end">
+            <p className="lg:col-span-6 text-[17px] sm:text-[20px] lg:text-[26px] leading-relaxed text-ink/85 max-w-[44ch]">
               Construímos a presença digital de pequenas e médias empresas
               locais em Portugal: indústria, restaurantes, lojas, oficinas e
               profissionais que ainda dependem do{" "}
@@ -94,7 +94,7 @@ export default function HomePage() {
             <div className="lg:col-span-6 flex lg:justify-end">
               <Link
                 href="/#servicos"
-                className="inline-flex items-center gap-3 px-8 py-5 bg-blue text-bg-bright rounded-full text-lg font-medium hover:bg-blue-deep transition-colors with-arrow"
+                className="inline-flex items-center gap-2 px-6 py-3.5 lg:px-8 lg:py-5 bg-blue text-bg-bright rounded-full text-base lg:text-lg font-medium hover:bg-blue-deep transition-colors with-arrow"
               >
                 Ver serviços <span className="arrow">→</span>
               </Link>
@@ -104,9 +104,9 @@ export default function HomePage() {
       </section>
 
       {/* ============== SERVICES ============== */}
-      <section className="border-t border-rule px-6 lg:px-10 py-24 lg:py-28">
+      <section className="border-t border-rule px-5 sm:px-6 lg:px-10 py-16 lg:py-28">
         <div className="mx-auto max-w-[1320px]">
-          <div className="grid lg:grid-cols-12 gap-10 mb-14 lg:mb-20">
+          <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 mb-10 lg:mb-20">
             <div className="lg:col-span-4">
               <div className="label mb-4">Serviços</div>
               <h2 className="display text-4xl md:text-5xl lg:text-6xl">
@@ -118,7 +118,7 @@ export default function HomePage() {
           {/* Featured: Criação de Websites — o serviço principal */}
           <article
             id="servicos"
-            className="card border-blue bg-blue-soft p-8 lg:p-12 mb-5 lg:mb-6 hover:border-blue-deep scroll-mt-8"
+            className="card border-blue bg-blue-soft p-6 sm:p-8 lg:p-12 mb-5 lg:mb-6 hover:border-blue-deep scroll-mt-8"
           >
             <div className="grid lg:grid-cols-12 gap-10 lg:gap-14">
               <div className="lg:col-span-7">
@@ -175,7 +175,7 @@ export default function HomePage() {
           </article>
 
           {/* Design + logo callout */}
-          <article className="card p-8 lg:p-12 hover:border-blue transition-colors">
+          <article className="card p-6 sm:p-8 lg:p-12 hover:border-blue transition-colors">
             <span className="label !text-blue !tracking-widest mb-5 inline-block">
               + Incluído no projeto
             </span>
@@ -193,9 +193,9 @@ export default function HomePage() {
       </section>
 
       {/* ============== WHY US ============== */}
-      <section className="border-t border-rule px-6 lg:px-10 py-24 lg:py-28 bg-bg-soft">
+      <section className="border-t border-rule px-5 sm:px-6 lg:px-10 py-16 lg:py-28 bg-bg-soft">
         <div className="mx-auto max-w-[1320px]">
-          <div className="grid lg:grid-cols-12 gap-10 mb-14 lg:mb-20">
+          <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 mb-10 lg:mb-20">
             <div className="lg:col-span-4">
               <div className="label mb-4">Porquê</div>
               <h2 className="display-tight text-4xl md:text-5xl lg:text-6xl">
@@ -246,9 +246,9 @@ export default function HomePage() {
       </section>
 
       {/* ============== CONTACT FORM ============== */}
-      <section className="border-t border-rule px-6 lg:px-10 py-20 lg:py-24 bg-bg-soft">
+      <section className="border-t border-rule px-5 sm:px-6 lg:px-10 py-16 lg:py-24 bg-bg-soft">
         <div className="mx-auto max-w-[1320px]">
-          <div className="bg-bg-bright border border-rule rounded-2xl p-8 lg:p-12 grid lg:grid-cols-12 gap-10 lg:gap-16">
+          <div className="bg-bg-bright border border-rule rounded-2xl p-6 sm:p-8 lg:p-12 grid lg:grid-cols-12 gap-8 lg:gap-16">
             <div className="lg:col-span-5">
               <div className="label mb-4">Formulário</div>
               <h2 className="display-tight text-3xl md:text-4xl lg:text-5xl mb-5 leading-[0.95]">

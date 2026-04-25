@@ -43,7 +43,7 @@ export function Header() {
 
   return (
     <header className="bg-bg-soft border-b border-rule relative z-40">
-      <div className="mx-auto max-w-[1320px] px-6 lg:px-10 h-[88px] flex items-center justify-between gap-6">
+      <div className="mx-auto max-w-[1320px] px-5 sm:px-6 lg:px-10 h-[72px] md:h-[88px] flex items-center justify-between gap-4">
         <Link
           href="/"
           aria-label="UPRA · Início"
@@ -104,7 +104,7 @@ export function Header() {
 
       {/* Mobile menu — full overlay */}
       <div
-        className={`md:hidden fixed inset-x-0 top-[88px] bottom-0 bg-bg-soft transition-all duration-300 ease-out z-30 ${
+        className={`md:hidden fixed inset-x-0 top-[72px] bottom-0 bg-bg-soft transition-all duration-300 ease-out z-30 ${
           menuOpen
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 -translate-y-4 pointer-events-none"

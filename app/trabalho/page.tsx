@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function TrabalhoPage() {
   return (
-    <section className="px-6 lg:px-12 pt-24 lg:pt-32 pb-32">
+    <section className="px-5 sm:px-6 lg:px-12 pt-12 lg:pt-32 pb-20 lg:pb-32">
       <div className="mx-auto max-w-[1440px]">
         <div className="label mb-10">Trabalho</div>
         <h1 className="display text-[clamp(48px,9vw,140px)]">

@@ -33,7 +33,7 @@ const FOOTER_LINKS = [
 export function Footer() {
   return (
     <footer className="bg-bg-soft border-t border-rule">
-      <div className="mx-auto max-w-[1320px] px-6 lg:px-10 py-20 lg:py-24">
+      <div className="mx-auto max-w-[1320px] px-5 sm:px-6 lg:px-10 py-14 lg:py-24">
         <div className="grid lg:grid-cols-12 gap-14 lg:gap-16">
           {/* Logo + tagline */}
           <div className="lg:col-span-5">

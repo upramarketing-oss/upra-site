@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function EquipaPage() {
   return (
-    <section className="px-6 lg:px-10 pt-16 lg:pt-24 pb-32 lg:pb-40">
+    <section className="px-5 sm:px-6 lg:px-10 pt-10 lg:pt-24 pb-20 lg:pb-40">
       <div className="mx-auto max-w-[1320px]">
         <div className="label mb-8">Equipa</div>
 
