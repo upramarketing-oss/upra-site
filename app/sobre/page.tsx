@@ -193,7 +193,8 @@ export default function SobrePage() {
                 Conta-nos sobre o teu negócio.
               </h2>
               <p className="mt-5 text-lg text-bg-bright/70 max-w-xl leading-relaxed">
-                20 minutos. Em português. Sem compromisso.
+                Uma chamada rápida para conhecer o teu negócio e perceber como
+                podemos ajudar.
               </p>
             </div>
             <div className="lg:col-span-4 lg:justify-self-end flex flex-wrap gap-3">
