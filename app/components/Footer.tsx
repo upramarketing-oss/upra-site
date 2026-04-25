@@ -35,26 +35,8 @@ export function Footer() {
     <footer className="bg-bg-soft border-t border-rule">
       <div className="mx-auto max-w-[1320px] px-6 sm:px-6 lg:px-10 py-14 lg:py-24">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
-          {/* Bloco da marca — centrado em mobile, alinhado à esquerda em desktop */}
-          <div className="lg:col-span-5 text-center lg:text-left flex flex-col items-center lg:items-start">
-            <Logo className="h-20 lg:h-20 w-auto mb-6" />
-            <p className="text-ink/75 text-base lg:text-lg leading-relaxed max-w-sm">
-              Construímos a presença digital de pequenas e médias empresas
-              locais em Portugal.
-            </p>
-            <a
-              href="mailto:upramarketing@gmail.com"
-              className="mt-5 inline-block font-mono text-sm text-blue hover:text-blue-deep link-line"
-            >
-              upramarketing@gmail.com
-            </a>
-          </div>
-
-          {/* Linha divisória só em mobile, entre marca e colunas */}
-          <div className="lg:hidden h-px bg-rule -my-2" />
-
-          {/* Colunas de links */}
-          <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-10 lg:gap-8">
+          {/* Colunas de links — primeiro em mobile, segundo em desktop */}
+          <div className="order-1 lg:order-2 lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-10 lg:gap-8">
             {FOOTER_LINKS.map((col) => (
               <div key={col.heading} className={col.heading === "Redes sociais" ? "col-span-2 md:col-span-1" : ""}>
                 <h4 className="font-display text-sm lg:text-base font-bold text-ink mb-4 lg:mb-5 uppercase tracking-wide lg:tracking-normal lg:normal-case">
@@ -91,6 +73,24 @@ export function Footer() {
                 </ul>
               </div>
             ))}
+          </div>
+
+          {/* Linha divisória só em mobile, entre colunas e marca */}
+          <div className="order-2 lg:hidden h-px bg-rule -my-2" />
+
+          {/* Bloco da marca — centrado em mobile (em baixo), à esquerda em desktop */}
+          <div className="order-3 lg:order-1 lg:col-span-5 text-center lg:text-left flex flex-col items-center lg:items-start">
+            <Logo className="h-20 w-auto mb-6" />
+            <p className="text-ink/75 text-base lg:text-lg leading-relaxed max-w-sm">
+              Construímos a presença digital de pequenas e médias empresas
+              locais em Portugal.
+            </p>
+            <a
+              href="mailto:upramarketing@gmail.com"
+              className="mt-5 inline-block font-mono text-sm text-blue hover:text-blue-deep link-line"
+            >
+              upramarketing@gmail.com
+            </a>
           </div>
         </div>
 
