@@ -45,7 +45,7 @@ const TIERS = [
     title: "Loja Online",
     tagline: "Vender online sem complicações.",
     price: "1.490",
-    timeline: "2–4 semanas",
+    timeline: "1–3 semanas",
     features: [
       "Tudo o que vem no Site Institucional",
       "Catálogo de produtos com variações",
