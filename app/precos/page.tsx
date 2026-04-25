@@ -120,13 +120,15 @@ export default function PrecosPage() {
                 </p>
 
                 <div className="mb-2">
-                  <div
-                    className={`label mb-2 ${
-                      tier.featured ? "!text-bg-bright/55" : ""
+                  <span
+                    className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-mono uppercase tracking-widest mb-3 font-semibold ${
+                      tier.featured
+                        ? "bg-blue/20 text-blue"
+                        : "bg-blue/10 text-blue"
                     }`}
                   >
                     A partir de
-                  </div>
+                  </span>
                   <div className="flex items-baseline gap-2">
                     <span className="display-tight text-5xl lg:text-6xl font-bold">
                       €{tier.price}
