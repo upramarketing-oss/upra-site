@@ -91,9 +91,9 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: ["/upra-logo.png"],
   },
-  // verification: {
-  //   google: "TODO_GOOGLE_SEARCH_CONSOLE_TOKEN",
-  // },
+  verification: {
+    google: "XWf2R8iB6CYeBAmiRnx0z4EwXnZHi9MdVt0I62DuOfA",
+  },
 };
 
 const jsonLd = {
