@@ -33,10 +33,10 @@ const FOOTER_LINKS = [
 export function Footer() {
   return (
     <footer className="bg-bg-soft border-t border-rule">
-      <div className="mx-auto max-w-[1320px] px-6 sm:px-6 lg:px-10 py-14 lg:py-24">
+      <div className="mx-auto max-w-[1320px] px-6 sm:px-6 lg:px-10 pt-14 pb-8 lg:py-24">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
           {/* Colunas de links — primeiro em mobile, segundo em desktop */}
-          <div className="order-1 lg:order-2 lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-10 lg:gap-8">
+          <div className="order-1 lg:order-2 lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-10 lg:gap-8 text-center lg:text-left">
             {FOOTER_LINKS.map((col) => (
               <div key={col.heading} className={col.heading === "Redes sociais" ? "col-span-2 md:col-span-1" : ""}>
                 <h4 className="font-display text-sm lg:text-base font-bold text-ink mb-4 lg:mb-5 uppercase tracking-wide lg:tracking-normal lg:normal-case">
@@ -95,7 +95,7 @@ export function Footer() {
         </div>
 
         {/* Bottom row */}
-        <div className="mt-12 lg:mt-20 pt-7 lg:pt-8 border-t border-rule flex flex-col md:flex-row gap-5 md:items-center md:justify-between text-center md:text-left">
+        <div className="mt-10 lg:mt-20 pt-6 lg:pt-8 border-t border-rule flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-center md:text-left">
           <p className="text-[11px] lg:text-xs font-mono text-mute uppercase tracking-widest order-2 md:order-1">
             © 2026 UPRA · Todos os direitos reservados
           </p>
