@@ -9,7 +9,6 @@ import { WA_MEETING } from "../lib/contact";
 const NAV = [
   { href: "/#servicos", label: "Serviços", match: ["/"] },
   { href: "/trabalho", label: "Trabalho", match: ["/trabalho"] },
-  { href: "/equipa", label: "Equipa", match: ["/equipa"] },
   { href: "/sobre", label: "Sobre", match: ["/sobre"] },
 ];
 
