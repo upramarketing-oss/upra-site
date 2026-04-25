@@ -176,8 +176,24 @@ export default function PrecosPage() {
             ))}
           </div>
 
+          {/* Design + logo callout — incluído em qualquer escalão */}
+          <article className="mt-10 lg:mt-14 bg-bg-bright border border-rule rounded-2xl p-7 sm:p-8 lg:p-12 hover:border-blue transition-colors">
+            <span className="label !text-blue !tracking-widest mb-5 inline-block">
+              + Incluído em qualquer escalão
+            </span>
+            <h2 className="display-tight text-3xl md:text-4xl lg:text-5xl mb-5 leading-tight max-w-3xl">
+              Tratamos também de todo o{" "}
+              <span className="text-blue">design</span> e{" "}
+              <span className="text-blue">logo</span> do seu futuro site.
+            </h2>
+            <p className="text-lg text-ink/75 leading-relaxed max-w-2xl">
+              Logo, paleta de cores, tipografia e desenho do site. Tudo
+              pensado à medida do seu negócio, sem templates genéricos.
+            </p>
+          </article>
+
           {/* Notas sobre orçamento */}
-          <div className="mt-10 lg:mt-14 bg-bg-bright border border-rule rounded-2xl p-7 sm:p-8 lg:p-12">
+          <div className="mt-5 lg:mt-6 bg-bg-bright border border-rule rounded-2xl p-7 sm:p-8 lg:p-12">
             {/* Intro */}
             <div className="max-w-3xl mb-10 lg:mb-14">
               <div className="label mb-3">Como calculamos</div>
