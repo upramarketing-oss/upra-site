@@ -206,7 +206,40 @@ export default function ServicosPage() {
         </div>
       </section>
 
-      {/* CTA escura */}
+      {/* CONTACT FORM */}
+      <section
+        id="formulario"
+        className="border-t border-rule px-5 sm:px-6 lg:px-10 py-16 lg:py-24 bg-bg-soft scroll-mt-8"
+      >
+        <div className="mx-auto max-w-[1320px]">
+          <div className="bg-bg-bright border border-rule rounded-2xl p-6 sm:p-8 lg:p-12 grid lg:grid-cols-12 gap-8 lg:gap-16">
+            <div className="lg:col-span-5">
+              <div className="label mb-4">Formulário</div>
+              <h2 className="display-tight text-3xl md:text-4xl lg:text-5xl mb-5 leading-[0.95]">
+                Conte-nos sobre o seu projeto.
+              </h2>
+              <p className="text-mute leading-relaxed max-w-sm">
+                Preencha o formulário e respondemos em breve. Sem compromisso.
+              </p>
+              <div className="mt-8 pt-6 border-t border-rule">
+                <div className="label mb-2">Ou diretamente</div>
+                <a
+                  href="mailto:geral@upramarketing.pt"
+                  className="font-mono text-sm text-blue hover:text-blue-deep link-line"
+                >
+                  geral@upramarketing.pt
+                </a>
+              </div>
+            </div>
+
+            <div className="lg:col-span-7">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA escura — final */}
       <section className="border-t border-rule px-5 sm:px-6 lg:px-10 py-16 lg:py-24 bg-ink text-bg-bright">
         <div className="mx-auto max-w-[1320px] grid lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-8">
@@ -237,39 +270,6 @@ export default function ServicosPage() {
             >
               Formulário
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* CONTACT FORM */}
-      <section
-        id="formulario"
-        className="border-t border-rule px-5 sm:px-6 lg:px-10 py-16 lg:py-24 bg-bg-soft scroll-mt-8"
-      >
-        <div className="mx-auto max-w-[1320px]">
-          <div className="bg-bg-bright border border-rule rounded-2xl p-6 sm:p-8 lg:p-12 grid lg:grid-cols-12 gap-8 lg:gap-16">
-            <div className="lg:col-span-5">
-              <div className="label mb-4">Formulário</div>
-              <h2 className="display-tight text-3xl md:text-4xl lg:text-5xl mb-5 leading-[0.95]">
-                Conte-nos sobre o seu projeto.
-              </h2>
-              <p className="text-mute leading-relaxed max-w-sm">
-                Preencha o formulário e respondemos em breve. Sem compromisso.
-              </p>
-              <div className="mt-8 pt-6 border-t border-rule">
-                <div className="label mb-2">Ou diretamente</div>
-                <a
-                  href="mailto:geral@upramarketing.pt"
-                  className="font-mono text-sm text-blue hover:text-blue-deep link-line"
-                >
-                  geral@upramarketing.pt
-                </a>
-              </div>
-            </div>
-
-            <div className="lg:col-span-7">
-              <ContactForm />
-            </div>
           </div>
         </div>
       </section>
