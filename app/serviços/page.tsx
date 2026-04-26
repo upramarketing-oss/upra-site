@@ -142,7 +142,10 @@ export default function ServicosPage() {
             </div>
 
             {/* Design + logo: faixa em largura total, abaixo das duas colunas */}
-            <div className="mt-8 lg:mt-10 flex items-start gap-4 p-5 lg:p-6 bg-bg-bright border border-blue/40 rounded-xl">
+            <div
+              id="design-logo"
+              className="mt-8 lg:mt-10 flex items-start gap-4 p-5 lg:p-6 bg-bg-bright border border-blue/40 rounded-xl scroll-mt-8 lg:scroll-mt-12"
+            >
               <span className="text-blue text-2xl leading-none mt-0.5 shrink-0">
                 ★
               </span>

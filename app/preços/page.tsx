@@ -97,7 +97,8 @@ export default function PrecosPage() {
             {TIERS.map((tier) => (
               <article
                 key={tier.title}
-                className={`relative rounded-2xl p-7 lg:p-9 flex flex-col ${
+                id={tier.title.toLowerCase().replace(/\s+/g, "-")}
+                className={`relative rounded-2xl p-7 lg:p-9 flex flex-col scroll-mt-8 lg:scroll-mt-12 ${
                   tier.featured
                     ? "bg-ink text-bg-bright border-2 border-blue"
                     : "bg-bg-bright border border-rule"
