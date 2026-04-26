@@ -16,6 +16,7 @@ const TIERS = [
     price: "390",
     timeline: "2–5 dias",
     features: [
+      "Design e logo à medida",
       "Página única (Hero + CTA + Provas)",
       "Formulário de captação",
       "Pixel Meta + Google Ads",
@@ -31,6 +32,7 @@ const TIERS = [
     price: "890",
     timeline: "1–2 semanas",
     features: [
+      "Design e logo à medida",
       "Páginas: Home, Sobre, Serviços, Contacto",
       "Blog ou área de notícias",
       "Galeria ou portefólio",
@@ -47,6 +49,7 @@ const TIERS = [
     price: "1.490",
     timeline: "1–3 semanas",
     features: [
+      "Design e logo à medida",
       "Tudo o que vem no Site Institucional",
       "Catálogo de produtos com variações",
       "Carrinho + checkout",
@@ -178,20 +181,38 @@ export default function PrecosPage() {
             ))}
           </div>
 
-          {/* Design + logo callout — incluído em qualquer escalão */}
+          {/* Plano mensal de manutenção — incluído em qualquer escalão */}
           <article className="relative mt-12 lg:mt-16 bg-blue-soft border-2 border-blue rounded-2xl p-7 sm:p-8 lg:p-12 shadow-2xl shadow-blue/20 lg:-translate-y-2 transition-transform hover:-translate-y-3">
-            <span className="label !text-blue !tracking-widest mb-5 inline-block">
-              + Incluído em qualquer escalão
-            </span>
-            <h2 className="display-tight text-3xl md:text-4xl lg:text-5xl mb-5 leading-tight max-w-3xl">
-              Tratamos também de todo o{" "}
-              <span className="text-blue">design</span> e{" "}
-              <span className="text-blue">logo</span> do seu futuro site.
-            </h2>
-            <p className="text-lg text-ink/75 leading-relaxed max-w-2xl">
-              Logo, paleta de cores, tipografia e desenho do site. Tudo
-              pensado à medida do seu negócio, sem templates genéricos.
-            </p>
+            <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 lg:items-center">
+              <div className="lg:col-span-2">
+                <span className="label !text-blue !tracking-widest mb-5 inline-block">
+                  + Plano mensal de manutenção
+                </span>
+                <h2 className="display-tight text-3xl md:text-4xl lg:text-5xl mb-5 leading-tight">
+                  Tratamos de{" "}
+                  <span className="text-blue">todos os custos</span> do seu
+                  site num <span className="text-blue">plano mensal</span>{" "}
+                  único.
+                </h2>
+                <p className="text-lg text-ink/75 leading-relaxed">
+                  Hosting, domínio, certificado SSL, atualizações e suporte
+                  estão incluídos no valor mensal. O cliente paga uma
+                  mensalidade e nós tratamos de tudo o resto, sem contas
+                  separadas nem custos inesperados.
+                </p>
+              </div>
+              <div className="lg:col-span-1 flex flex-col items-start lg:items-end lg:text-right">
+                <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-mono uppercase tracking-widest mb-3 font-semibold bg-blue/15 text-blue">
+                  Tudo incluído
+                </span>
+                <div className="display-tight text-5xl lg:text-6xl font-bold leading-none">
+                  €49
+                  <span className="text-2xl lg:text-3xl text-ink/60 font-normal">
+                    /mês
+                  </span>
+                </div>
+              </div>
+            </div>
           </article>
 
           {/* Notas sobre orçamento */}

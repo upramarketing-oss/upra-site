@@ -153,6 +153,20 @@ export default function HomePage() {
                     ))}
                   </ul>
                 </div>
+
+                <div className="mt-6 lg:mt-7 flex items-start gap-3 p-4 lg:p-5 bg-bg-bright border border-blue/40 rounded-xl">
+                  <span className="text-blue text-xl leading-none mt-0.5">
+                    ★
+                  </span>
+                  <p className="text-sm lg:text-[15px] text-ink/85 leading-relaxed">
+                    <span className="font-semibold text-blue-deep">
+                      Design e logo
+                    </span>{" "}
+                    feitos à medida do seu negócio. Criamos a paleta de
+                    cores, a tipografia e a identidade visual de raiz, sem
+                    usar templates.
+                  </p>
+                </div>
               </div>
 
               <div className="lg:col-span-5 flex flex-col gap-3">
@@ -174,19 +188,21 @@ export default function HomePage() {
             </div>
           </article>
 
-          {/* Design + logo callout */}
+          {/* Plano mensal de manutenção */}
           <article className="card p-6 sm:p-8 lg:p-12 hover:border-blue transition-colors">
             <span className="label !text-blue !tracking-widest mb-5 inline-block">
-              + Incluído no projeto
+              + Plano mensal de manutenção
             </span>
             <h3 className="display-tight text-3xl md:text-4xl lg:text-5xl mb-5 leading-tight max-w-3xl">
-              Tratamos também de todo o{" "}
-              <span className="text-blue">design</span> e{" "}
-              <span className="text-blue">logo</span> do seu futuro site.
+              Tratamos de{" "}
+              <span className="text-blue">todos os custos</span> do seu site
+              num <span className="text-blue">plano mensal</span> único.
             </h3>
             <p className="text-lg text-ink/75 leading-relaxed max-w-2xl">
-              Logo, paleta de cores, tipografia e desenho do site. Tudo
-              pensado à medida do seu negócio, sem templates genéricos.
+              Hosting, domínio, certificado SSL, atualizações e suporte
+              estão incluídos no valor mensal. O cliente paga uma mensalidade
+              e nós tratamos de tudo o resto, sem contas separadas nem
+              custos inesperados.
             </p>
           </article>
         </div>
