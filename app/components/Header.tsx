@@ -7,7 +7,7 @@ import { Logo } from "./Logo";
 import { WA_MEETING } from "../lib/contact";
 
 const NAV = [
-  { href: "/#servicos", label: "Serviços", match: ["/"] },
+  { href: "/servicos", label: "Serviços", match: ["/servicos"] },
   { href: "/precos", label: "Preços", match: ["/precos"] },
   { href: "/trabalho", label: "Trabalho", match: ["/trabalho"] },
   { href: "/sobre", label: "Sobre", match: ["/sobre"] },

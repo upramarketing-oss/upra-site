@@ -41,17 +41,6 @@ const WEBSITE_TYPES = [
   },
 ];
 
-const WEBSITE_INCLUDED = [
-  "Mobile-first (rápido em telemóvel)",
-  "SEO local (Google, Maps e Reviews)",
-  "Formulário com integração WhatsApp ou email",
-  "Analytics para saber quem visita o site",
-  "Painel simples para editar texto e imagens",
-  "Hosting e domínio configurados por nós",
-  "Certificado SSL (cadeado verde) incluído",
-  "Suporte 30 dias após lançamento",
-];
-
 const REASONS = [
   {
     title: "Performance e segurança",
@@ -93,7 +82,7 @@ export default function HomePage() {
             </p>
             <div className="lg:col-span-6 flex lg:justify-end">
               <Link
-                href="/#servicos"
+                href="/servicos"
                 className="inline-flex items-center gap-2 px-6 py-3.5 lg:px-8 lg:py-5 bg-blue text-bg-bright rounded-full text-base lg:text-lg font-medium hover:bg-blue-deep transition-colors with-arrow"
               >
                 Ver serviços <span className="arrow">→</span>
@@ -103,141 +92,50 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ============== SERVICES ============== */}
+      {/* ============== SERVICES PREVIEW ============== */}
       <section className="border-t border-rule px-5 sm:px-6 lg:px-10 py-16 lg:py-28">
         <div className="mx-auto max-w-[1320px]">
-          <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 mb-10 lg:mb-20">
-            <div className="lg:col-span-4">
+          <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 mb-10 lg:mb-16">
+            <div className="lg:col-span-7">
               <div className="label mb-4">Serviços</div>
-              <h2 className="display text-4xl md:text-5xl lg:text-6xl">
-                O que fazemos.
+              <h2 className="display text-4xl md:text-5xl lg:text-6xl mb-5 leading-[0.95]">
+                O que <span className="text-blue">fazemos.</span>
               </h2>
+              <p className="text-lg lg:text-xl text-ink/80 leading-relaxed max-w-xl">
+                Criamos websites pensados para vender, com design e identidade
+                visual desenhados à medida do seu negócio.
+              </p>
+            </div>
+            <div className="lg:col-span-5 flex lg:justify-end lg:items-end">
+              <Link
+                href="/servicos"
+                className="inline-flex items-center gap-2 px-6 py-3.5 lg:px-7 lg:py-4 bg-ink text-bg-bright rounded-full font-medium hover:bg-blue transition-colors with-arrow"
+              >
+                Ver todos os serviços <span className="arrow">→</span>
+              </Link>
             </div>
           </div>
 
-          {/* Featured: Criação de Websites — o serviço principal */}
-          <article
-            id="servicos"
-            className="card border-blue bg-blue-soft p-6 sm:p-8 lg:p-12 mb-5 lg:mb-6 hover:border-blue-deep scroll-mt-8"
-          >
-            <div className="grid lg:grid-cols-12 gap-10 lg:gap-14">
-              <div className="lg:col-span-7">
-                <div className="mb-6">
-                  <span className="label !text-blue !tracking-widest">
-                    ★ Serviço principal
-                  </span>
-                </div>
-                <h3 className="display-tight text-4xl md:text-5xl lg:text-6xl mb-5 leading-[0.95]">
-                  Criação de Websites
+          {/* 3 tipos de sites — cards compactos */}
+          <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
+            {WEBSITE_TYPES.map((type) => (
+              <Link
+                key={type.title}
+                href="/servicos"
+                className="bg-bg-bright border border-rule rounded-2xl p-7 lg:p-8 hover:border-blue transition-colors group"
+              >
+                <h3 className="display text-2xl lg:text-3xl mb-3 group-hover:text-blue transition-colors">
+                  {type.title}
                 </h3>
-                <p className="text-lg lg:text-xl text-ink/80 leading-relaxed max-w-xl mb-8">
-                  O mundo é digital, e os seus clientes também. É{" "}
-                  <span className="text-blue font-semibold">online</span> que
-                  se procuram serviços, comparam preços e tomam decisões. Ter
-                  um website já não é um luxo, mas sim uma{" "}
-                  <span className="text-blue font-semibold">obrigação</span>{" "}
-                  para{" "}
-                  <span className="text-blue font-semibold">destacar</span> o
-                  seu negócio!
+                <p className="text-[15px] text-mute leading-relaxed mb-5">
+                  {type.body}
                 </p>
-                <div className="border-t border-blue/30 pt-6">
-                  <div className="label mb-4 !text-blue-deep">
-                    Incluído em todos os projetos
-                  </div>
-                  <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm text-ink/80">
-                    {WEBSITE_INCLUDED.map((item) => (
-                      <li key={item} className="flex items-start gap-2">
-                        <span className="text-blue mt-0.5">→</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <div className="lg:col-span-5 flex flex-col gap-3">
-                <div className="label mb-1">Tipos de sites</div>
-                {WEBSITE_TYPES.map((type) => (
-                  <div
-                    key={type.title}
-                    className="bg-bg-bright border border-rule rounded-2xl p-5 lg:p-6 hover:border-blue transition-colors"
-                  >
-                    <h4 className="display text-xl lg:text-2xl mb-2">
-                      {type.title}
-                    </h4>
-                    <p className="text-sm lg:text-[15px] text-mute leading-relaxed">
-                      {type.body}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Design + logo: faixa em largura total, abaixo das duas colunas */}
-            <div className="mt-8 lg:mt-10 flex items-start gap-4 p-5 lg:p-6 bg-bg-bright border border-blue/40 rounded-xl">
-              <span className="text-blue text-2xl leading-none mt-0.5 shrink-0">
-                ★
-              </span>
-              <p className="text-sm lg:text-[15px] text-ink/85 leading-relaxed">
-                <span className="font-semibold text-blue-deep">
-                  Design e logo
-                </span>{" "}
-                feitos à medida do seu negócio. Criamos a paleta de cores, a
-                tipografia e a identidade visual de raiz, sem usar templates.
-              </p>
-            </div>
-          </article>
-
-          {/* Plano mensal de manutenção */}
-          <article className="card p-6 sm:p-8 lg:p-12 hover:border-blue transition-colors">
-            <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 lg:items-center">
-              <div className="lg:col-span-7">
-                <span className="label !text-blue !tracking-widest mb-5 inline-block">
-                  + Plano mensal de manutenção
+                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-blue">
+                  Saber mais <span aria-hidden>→</span>
                 </span>
-                <h3 className="display-tight text-3xl md:text-4xl lg:text-5xl mb-5 leading-tight">
-                  Tratamos de{" "}
-                  <span className="text-blue">todos os custos</span> do seu
-                  site num <span className="text-blue">plano mensal</span>{" "}
-                  único.
-                </h3>
-                <p className="text-lg text-ink/75 leading-relaxed">
-                  Hosting, domínio, certificado SSL, atualizações e suporte
-                  estão incluídos no valor mensal. O cliente paga uma
-                  mensalidade e nós tratamos de tudo o resto, sem contas
-                  separadas nem custos inesperados.
-                </p>
-              </div>
-
-              <div className="lg:col-span-5">
-                <div className="bg-blue-soft border-2 border-blue rounded-2xl p-6 lg:p-8">
-                  <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-mono uppercase tracking-widest font-semibold bg-blue/15 text-blue mb-4">
-                    Tudo incluído
-                  </span>
-                  <div className="flex items-baseline gap-2 mb-6">
-                    <span className="display-tight text-5xl lg:text-6xl font-bold leading-none">
-                      €49
-                    </span>
-                    <span className="text-xl text-ink/60">/mês</span>
-                  </div>
-                  <ul className="space-y-2.5 text-[15px] text-ink/85">
-                    {[
-                      "Hosting + domínio",
-                      "Certificado SSL",
-                      "Atualizações de segurança",
-                      "Backups automáticos",
-                      "Suporte contínuo",
-                    ].map((item) => (
-                      <li key={item} className="flex items-start gap-2.5">
-                        <span className="text-blue shrink-0 mt-0.5">→</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </article>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

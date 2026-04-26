@@ -12,10 +12,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
+      url: `${base}/servicos`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.95,
+    },
+    {
       url: `${base}/precos`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.9,
+    },
+    {
+      url: `${base}/contacto`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     {
       url: `${base}/sobre`,
@@ -28,12 +40,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "weekly",
       priority: 0.6,
-    },
-    {
-      url: `${base}/contacto`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
     },
   ];
 }

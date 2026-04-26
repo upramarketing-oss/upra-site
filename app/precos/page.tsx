@@ -303,7 +303,7 @@ export default function PrecosPage() {
               Pedir orçamento <span className="arrow">→</span>
             </a>
             <Link
-              href="/#formulario"
+              href="/contacto"
               className="inline-flex items-center gap-2 px-6 py-4 border border-bg-bright/30 text-bg-bright rounded-full hover:bg-bg-bright hover:text-ink transition-colors"
             >
               Formulário
