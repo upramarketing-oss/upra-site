@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Serviços",
   description:
     "Criação de websites, lojas online e landing pages para PMEs portuguesas. Design e logo à medida, hosting incluído e suporte contínuo.",
-  alternates: { canonical: "https://upra.pt/servicos" },
+  alternates: { canonical: "https://upra.pt/serviços" },
 };
 
 const WEBSITE_TYPES = [

@@ -82,7 +82,7 @@ export default function HomePage() {
             </p>
             <div className="lg:col-span-6 flex lg:justify-end">
               <Link
-                href="/servicos"
+                href="/serviços"
                 className="inline-flex items-center gap-2 px-6 py-3.5 lg:px-8 lg:py-5 bg-blue text-bg-bright rounded-full text-base lg:text-lg font-medium hover:bg-blue-deep transition-colors with-arrow"
               >
                 Ver serviços <span className="arrow">→</span>
@@ -108,7 +108,7 @@ export default function HomePage() {
             </div>
             <div className="lg:col-span-5 flex lg:justify-end lg:items-end">
               <Link
-                href="/servicos"
+                href="/serviços"
                 className="inline-flex items-center gap-2 px-6 py-3.5 lg:px-7 lg:py-4 bg-ink text-bg-bright rounded-full font-medium hover:bg-blue transition-colors with-arrow"
               >
                 Ver todos os serviços <span className="arrow">→</span>
@@ -121,7 +121,7 @@ export default function HomePage() {
             {WEBSITE_TYPES.map((type) => (
               <Link
                 key={type.title}
-                href="/servicos"
+                href="/serviços"
                 className="bg-bg-bright border border-rule rounded-2xl p-7 lg:p-8 hover:border-blue transition-colors group"
               >
                 <h3 className="display text-2xl lg:text-3xl mb-3 group-hover:text-blue transition-colors">
