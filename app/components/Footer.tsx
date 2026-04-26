@@ -6,10 +6,10 @@ const FOOTER_LINKS = [
   {
     heading: "Serviços",
     links: [
-      { label: "Websites", href: "/serviços" },
-      { label: "Lojas Online", href: "/serviços" },
-      { label: "Landing Pages", href: "/serviços" },
-      { label: "Design", href: "/serviços" },
+      { label: "Websites", href: "/serviços#criacao-websites" },
+      { label: "Lojas Online", href: "/serviços#criacao-websites" },
+      { label: "Landing Pages", href: "/serviços#criacao-websites" },
+      { label: "Design", href: "/serviços#criacao-websites" },
     ],
   },
   {

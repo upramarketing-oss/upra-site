@@ -84,7 +84,10 @@ export default function ServicosPage() {
       <section className="border-t border-rule px-5 sm:px-6 lg:px-10 py-16 lg:py-24 bg-bg-soft">
         <div className="mx-auto max-w-[1320px]">
           {/* Featured: Criação de Websites — o serviço principal */}
-          <article className="card border-blue bg-blue-soft p-6 sm:p-8 lg:p-12 mb-5 lg:mb-6 hover:border-blue-deep">
+          <article
+            id="criacao-websites"
+            className="card border-blue bg-blue-soft p-6 sm:p-8 lg:p-12 mb-5 lg:mb-6 hover:border-blue-deep scroll-mt-8 lg:scroll-mt-12"
+          >
             <div className="grid lg:grid-cols-12 gap-10 lg:gap-14">
               <div className="lg:col-span-7">
                 <div className="mb-6">
