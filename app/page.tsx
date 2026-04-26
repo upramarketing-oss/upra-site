@@ -153,20 +153,6 @@ export default function HomePage() {
                     ))}
                   </ul>
                 </div>
-
-                <div className="mt-6 lg:mt-7 flex items-start gap-3 p-4 lg:p-5 bg-bg-bright border border-blue/40 rounded-xl">
-                  <span className="text-blue text-xl leading-none mt-0.5">
-                    ★
-                  </span>
-                  <p className="text-sm lg:text-[15px] text-ink/85 leading-relaxed">
-                    <span className="font-semibold text-blue-deep">
-                      Design e logo
-                    </span>{" "}
-                    feitos à medida do seu negócio. Criamos a paleta de
-                    cores, a tipografia e a identidade visual de raiz, sem
-                    usar templates.
-                  </p>
-                </div>
               </div>
 
               <div className="lg:col-span-5 flex flex-col gap-3">
@@ -186,24 +172,71 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
+
+            {/* Design + logo: faixa em largura total, abaixo das duas colunas */}
+            <div className="mt-8 lg:mt-10 flex items-start gap-4 p-5 lg:p-6 bg-bg-bright border border-blue/40 rounded-xl">
+              <span className="text-blue text-2xl leading-none mt-0.5 shrink-0">
+                ★
+              </span>
+              <p className="text-sm lg:text-[15px] text-ink/85 leading-relaxed">
+                <span className="font-semibold text-blue-deep">
+                  Design e logo
+                </span>{" "}
+                feitos à medida do seu negócio. Criamos a paleta de cores, a
+                tipografia e a identidade visual de raiz, sem usar templates.
+              </p>
+            </div>
           </article>
 
           {/* Plano mensal de manutenção */}
           <article className="card p-6 sm:p-8 lg:p-12 hover:border-blue transition-colors">
-            <span className="label !text-blue !tracking-widest mb-5 inline-block">
-              + Plano mensal de manutenção
-            </span>
-            <h3 className="display-tight text-3xl md:text-4xl lg:text-5xl mb-5 leading-tight max-w-3xl">
-              Tratamos de{" "}
-              <span className="text-blue">todos os custos</span> do seu site
-              num <span className="text-blue">plano mensal</span> único.
-            </h3>
-            <p className="text-lg text-ink/75 leading-relaxed max-w-2xl">
-              Hosting, domínio, certificado SSL, atualizações e suporte
-              estão incluídos no valor mensal. O cliente paga uma mensalidade
-              e nós tratamos de tudo o resto, sem contas separadas nem
-              custos inesperados.
-            </p>
+            <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 lg:items-center">
+              <div className="lg:col-span-7">
+                <span className="label !text-blue !tracking-widest mb-5 inline-block">
+                  + Plano mensal de manutenção
+                </span>
+                <h3 className="display-tight text-3xl md:text-4xl lg:text-5xl mb-5 leading-tight">
+                  Tratamos de{" "}
+                  <span className="text-blue">todos os custos</span> do seu
+                  site num <span className="text-blue">plano mensal</span>{" "}
+                  único.
+                </h3>
+                <p className="text-lg text-ink/75 leading-relaxed">
+                  Hosting, domínio, certificado SSL, atualizações e suporte
+                  estão incluídos no valor mensal. O cliente paga uma
+                  mensalidade e nós tratamos de tudo o resto, sem contas
+                  separadas nem custos inesperados.
+                </p>
+              </div>
+
+              <div className="lg:col-span-5">
+                <div className="bg-blue-soft border-2 border-blue rounded-2xl p-6 lg:p-8">
+                  <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-mono uppercase tracking-widest font-semibold bg-blue/15 text-blue mb-4">
+                    Tudo incluído
+                  </span>
+                  <div className="flex items-baseline gap-2 mb-6">
+                    <span className="display-tight text-5xl lg:text-6xl font-bold leading-none">
+                      €49
+                    </span>
+                    <span className="text-xl text-ink/60">/mês</span>
+                  </div>
+                  <ul className="space-y-2.5 text-[15px] text-ink/85">
+                    {[
+                      "Hosting + domínio",
+                      "Certificado SSL",
+                      "Atualizações de segurança",
+                      "Backups automáticos",
+                      "Suporte contínuo",
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-2.5">
+                        <span className="text-blue shrink-0 mt-0.5">→</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
           </article>
         </div>
       </section>

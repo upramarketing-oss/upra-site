@@ -213,6 +213,25 @@ export default function PrecosPage() {
                 </div>
               </div>
             </div>
+
+            {/* Pontos principais incluídos no plano */}
+            <ul className="mt-8 lg:mt-10 pt-6 lg:pt-8 border-t border-blue/30 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-x-5 gap-y-3 lg:gap-6">
+              {[
+                "Hosting + domínio",
+                "Certificado SSL",
+                "Atualizações de segurança",
+                "Backups automáticos",
+                "Suporte contínuo",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-2 text-[14px] lg:text-[15px] text-ink/85 font-medium"
+                >
+                  <span className="text-blue shrink-0 mt-0.5">→</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </article>
 
           {/* Notas sobre orçamento */}
