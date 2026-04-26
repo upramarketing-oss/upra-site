@@ -9,7 +9,6 @@ const FOOTER_LINKS = [
       { label: "Websites", href: "/serviços#criacao-websites" },
       { label: "Lojas Online", href: "/preços#loja-online" },
       { label: "Landing Pages", href: "/preços#landing-page" },
-      { label: "Design", href: "/serviços#design-logo" },
     ],
   },
   {
