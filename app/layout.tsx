@@ -4,6 +4,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { CookieConsent } from "./components/CookieConsent";
 import { WhatsAppPopup } from "./components/WhatsAppPopup";
+import { MeetingPopup } from "./components/MeetingPopup";
 import "./globals.css";
 
 const bricolage = Bricolage_Grotesque({
@@ -149,6 +150,7 @@ export default function RootLayout({
         <Footer />
         <CookieConsent />
         <WhatsAppPopup />
+        <MeetingPopup />
       </body>
     </html>
   );

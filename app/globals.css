@@ -155,6 +155,31 @@ body {
   animation: wa-slide 0.4s cubic-bezier(0.2, 0, 0, 1);
 }
 
+/* Meeting popup — entrada após 30s */
+@keyframes meeting-pop {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.94);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-6px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.animate-meeting-pop {
+  animation: meeting-pop 0.55s cubic-bezier(0.34, 1.4, 0.6, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-meeting-pop {
+    animation: none;
+  }
+}
+
 /* Word-by-word reveal animation for hero subline */
 .hero-subline .word {
   display: inline-block;
