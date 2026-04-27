@@ -101,9 +101,6 @@ export default function TermosPage() {
             pela UPRA. Ao contactar-nos ou contratar um serviço, aceita as
             condições abaixo.
           </p>
-          <div className="mt-6 font-mono text-xs text-mute uppercase tracking-widest">
-            Última atualização: A definir
-          </div>
         </div>
       </section>
 

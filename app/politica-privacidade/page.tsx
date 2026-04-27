@@ -89,9 +89,6 @@ export default function PoliticaPrivacidadePage() {
             UPRA recolhe, como os utiliza e quais os seus direitos ao abrigo
             do Regulamento Geral de Proteção de Dados (RGPD).
           </p>
-          <div className="mt-6 font-mono text-xs text-mute uppercase tracking-widest">
-            Última atualização: A definir
-          </div>
         </div>
       </section>
 
