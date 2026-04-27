@@ -90,6 +90,17 @@ export function Footer() {
             >
               geral@upramarketing.pt
             </a>
+
+            {/*
+              IDENTIFICAÇÃO LEGAL — obrigatória por lei (DL 7/2004, art. 10º)
+              Substitua os placeholders quando tiver os dados reais.
+            */}
+            <div className="mt-6 pt-5 border-t border-rule/60 w-full max-w-sm space-y-1 font-mono text-[11px] lg:text-xs text-mute uppercase tracking-widest">
+              <div>UPRA · NIF [a definir]</div>
+              <div className="normal-case tracking-normal text-mute/90 font-normal text-[12px] lg:text-[13px]">
+                Morada: [a definir]
+              </div>
+            </div>
           </div>
         </div>
 
@@ -107,6 +118,12 @@ export function Footer() {
             </Link>
             <Link href="/termos" className="hover:text-ink transition-colors">
               Termos e Condições
+            </Link>
+            <Link
+              href="/cookies"
+              className="hover:text-ink transition-colors"
+            >
+              Política de cookies
             </Link>
             <CookiesButton className="hover:text-ink transition-colors" />
             <a
