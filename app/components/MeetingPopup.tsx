@@ -34,14 +34,22 @@ export function MeetingPopup() {
   }, [pathname]);
 
   // Bloquear scroll do body quando o modal está aberto
+  // Compensa a barra de scroll para evitar layout shift quando aparece
   useEffect(() => {
     if (visible && !closing) {
+      const scrollbarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
       document.body.style.overflow = "hidden";
+      if (scrollbarWidth > 0) {
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
+      }
     } else {
       document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
     }
     return () => {
       document.body.style.overflow = "";
+      document.body.style.paddingRight = "";
     };
   }, [visible, closing]);
 
@@ -118,24 +126,24 @@ export function MeetingPopup() {
       role="dialog"
       aria-modal="true"
       aria-label="Pedido de contacto UPRA"
-      className={`fixed inset-0 z-[100] flex items-center justify-center p-4 lg:p-6 transition-opacity duration-300 ${
-        closing ? "opacity-0" : "opacity-100"
-      }`}
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 lg:p-6"
     >
-      {/* Backdrop */}
+      {/* Backdrop — overlay simples, sem blur */}
       <button
         type="button"
         aria-label="Fechar"
         onClick={dismiss}
-        className="absolute inset-0 bg-ink/70 backdrop-blur-[2px] cursor-default"
+        className={`absolute inset-0 bg-ink/65 cursor-default transition-opacity duration-200 ${
+          closing ? "opacity-0" : "opacity-100 animate-meeting-backdrop"
+        }`}
       />
 
       {/* Modal */}
       <div
-        className={`relative w-full max-w-[480px] bg-bg-bright rounded-3xl shadow-2xl shadow-ink/40 p-7 lg:p-9 transition-all duration-300 ${
+        className={`relative w-full max-w-[480px] bg-bg-bright rounded-3xl shadow-2xl shadow-ink/40 p-7 lg:p-9 transition-[opacity,transform] duration-200 ease-out ${
           closing
-            ? "translate-y-3 scale-95"
-            : "translate-y-0 scale-100 animate-meeting-pop"
+            ? "opacity-0 translate-y-3"
+            : "opacity-100 translate-y-0 animate-meeting-pop"
         }`}
       >
         {/* Botão fechar (canto sup. dir.) */}
