@@ -133,14 +133,18 @@ export function ContactForm() {
         <span>
           Li e aceito a{" "}
           <a
-            href="#"
+            href="/politica-privacidade"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-ink underline underline-offset-2 hover:text-blue"
           >
             Política de Privacidade
           </a>{" "}
           e os{" "}
           <a
-            href="#"
+            href="/termos"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-ink underline underline-offset-2 hover:text-blue"
           >
             Termos

@@ -133,17 +133,15 @@ export function MeetingPopup() {
         type="button"
         aria-label="Fechar"
         onClick={dismiss}
-        className={`absolute inset-0 bg-ink/65 cursor-default transition-opacity duration-200 ${
-          closing ? "opacity-0" : "opacity-100 animate-meeting-backdrop"
+        className={`absolute inset-0 bg-ink/60 cursor-default ${
+          closing ? "animate-meeting-backdrop-out" : "animate-meeting-backdrop"
         }`}
       />
 
-      {/* Modal */}
+      {/* Modal — só keyframes, sem transforms persistentes para texto crispier */}
       <div
-        className={`relative w-full max-w-[480px] bg-bg-bright rounded-3xl shadow-2xl shadow-ink/40 p-7 lg:p-9 transition-[opacity,transform] duration-200 ease-out ${
-          closing
-            ? "opacity-0 translate-y-3"
-            : "opacity-100 translate-y-0 animate-meeting-pop"
+        className={`relative w-full max-w-[480px] bg-bg-bright rounded-3xl shadow-2xl shadow-ink/40 p-7 lg:p-9 ${
+          closing ? "animate-meeting-pop-out" : "animate-meeting-pop"
         }`}
       >
         {/* Botão fechar (canto sup. dir.) */}

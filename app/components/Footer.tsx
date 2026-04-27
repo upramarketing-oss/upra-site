@@ -99,11 +99,14 @@ export function Footer() {
             © 2026 UPRA · Todos os direitos reservados
           </p>
           <div className="flex flex-wrap justify-center md:justify-end gap-x-5 gap-y-2 text-sm text-mute order-1 md:order-2">
-            <Link href="#" className="hover:text-ink transition-colors">
+            <Link
+              href="/politica-privacidade"
+              className="hover:text-ink transition-colors"
+            >
               Política de privacidade
             </Link>
-            <Link href="#" className="hover:text-ink transition-colors">
-              Informações legais
+            <Link href="/termos" className="hover:text-ink transition-colors">
+              Termos e Condições
             </Link>
             <CookiesButton className="hover:text-ink transition-colors" />
             <a

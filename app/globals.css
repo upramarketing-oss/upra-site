@@ -155,33 +155,30 @@ body {
   animation: wa-slide 0.4s cubic-bezier(0.2, 0, 0, 1);
 }
 
-/* Meeting popup — entrada após 30s */
-@keyframes meeting-pop {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.animate-meeting-pop {
-  animation: meeting-pop 0.28s cubic-bezier(0.2, 0, 0, 1);
-  will-change: transform, opacity;
-}
-
-@keyframes meeting-backdrop-fade {
+/* Meeting popup — fade puro de opacidade, zero transforms = texto pixel-perfect */
+@keyframes meeting-fade-in {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+.animate-meeting-pop,
 .animate-meeting-backdrop {
-  animation: meeting-backdrop-fade 0.22s ease-out;
+  animation: meeting-fade-in 0.22s ease-out;
+}
+
+@keyframes meeting-fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+.animate-meeting-pop-out,
+.animate-meeting-backdrop-out {
+  animation: meeting-fade-out 0.18s ease-in forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .animate-meeting-pop,
-  .animate-meeting-backdrop {
+  .animate-meeting-pop-out,
+  .animate-meeting-backdrop,
+  .animate-meeting-backdrop-out {
     animation: none;
   }
 }
