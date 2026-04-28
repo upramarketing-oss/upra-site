@@ -17,8 +17,14 @@ export function WhatsAppPopup() {
       {/* Popup card — absoluto acima do botão, só visível ao hover */}
       <div className="absolute bottom-[calc(100%+12px)] right-0 w-[340px] max-w-[calc(100vw-3rem)] opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 bg-bg-bright border border-rule rounded-2xl shadow-2xl p-5 pointer-events-none group-hover:pointer-events-auto origin-bottom-right">
         <div className="flex items-start gap-3 mb-4">
-          <div className="w-11 h-11 rounded-full bg-blue text-bg-bright flex items-center justify-center font-display font-bold text-sm shrink-0">
-            U
+          <div className="w-11 h-11 rounded-full bg-blue-soft border border-blue/20 flex items-center justify-center shrink-0 overflow-hidden">
+            <img
+              src="/equipa-avatar.png"
+              alt="Equipa UPRA"
+              width={44}
+              height={44}
+              className="w-full h-full object-cover"
+            />
           </div>
           <div className="flex-1 min-w-0">
             <h4 className="font-display font-bold text-base leading-tight">
