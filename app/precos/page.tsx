@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Preços",
   description:
     "Investimento em websites para PMEs portuguesas: landing pages, sites institucionais e lojas online. Valores a partir de, com orçamento personalizado em 48 horas.",
-  alternates: { canonical: "https://upra.pt/preços" },
+  alternates: { canonical: "https://upra.pt/precos" },
 };
 
 const TIERS = [

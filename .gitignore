@@ -7,3 +7,7 @@ next-env.d.ts
 *.tsbuildinfo
 
 .vercel
+
+# UPRA local credentials (never commit)
+_credentials.md
+**/_credentials.md
