@@ -114,28 +114,8 @@ export default function HomePage() {
                 O que <span className="text-blue">fazemos.</span>
               </h2>
             </div>
-            <div className="lg:col-span-5">
-              <p className="text-lg lg:text-xl text-ink/80 leading-relaxed mb-6">
-                Criamos websites pensados para{" "}
-                <span className="text-ink font-semibold">vender</span>, com
-                design e identidade visual desenhados à medida do seu
-                negócio.
-              </p>
-              <div className="flex flex-wrap gap-2">
-                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-bg-bright border border-rule text-[11px] font-mono uppercase tracking-widest text-ink/85">
-                  <span className="w-1.5 h-1.5 rounded-full bg-blue inline-block" />
-                  3 tipos de site
-                </span>
-                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-bg-bright border border-rule text-[11px] font-mono uppercase tracking-widest text-ink/85">
-                  <span className="w-1.5 h-1.5 rounded-full bg-blue inline-block" />
-                  8 itens incluídos
-                </span>
-                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-bg-bright border border-rule text-[11px] font-mono uppercase tracking-widest text-ink/85">
-                  <span className="w-1.5 h-1.5 rounded-full bg-blue inline-block" />
-                  Lançamento em 1-3 sem
-                </span>
-              </div>
-            </div>
+            {/* Espaço reservado para a mascote da UPRA — a adicionar quando estiver criada */}
+            <div className="lg:col-span-5 hidden lg:block" />
           </div>
 
           {/* Featured: Criação de Websites — o serviço principal */}
