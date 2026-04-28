@@ -7,8 +7,17 @@ export function CookiesButton({ className = "" }: { className?: string }) {
       onClick={() => {
         window.dispatchEvent(new CustomEvent("upra:reopen-cookies"));
       }}
-      style={{ font: "inherit", color: "inherit" }}
-      className={`bg-transparent border-0 p-0 cursor-pointer ${className}`}
+      style={{
+        font: "inherit",
+        color: "inherit",
+        cursor: "pointer",
+        background: "transparent",
+        border: 0,
+        padding: 0,
+        appearance: "none",
+        WebkitAppearance: "none",
+      }}
+      className={className}
     >
       Cookies
     </button>
