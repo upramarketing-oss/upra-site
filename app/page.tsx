@@ -111,9 +111,9 @@ export default function HomePage() {
           <img
             src="/mascote.png"
             alt="Mascote UPRA"
-            width={400}
-            height={400}
-            className="hidden lg:block absolute right-2 xl:right-8 top-2 lg:top-4 w-56 xl:w-64 2xl:w-72 z-20 pointer-events-none select-none drop-shadow-2xl"
+            width={300}
+            height={310}
+            className="hidden lg:block absolute right-4 xl:right-12 -top-4 lg:top-0 w-48 xl:w-56 2xl:w-64 z-20 pointer-events-none select-none drop-shadow-2xl"
           />
 
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 mb-10 lg:mb-16 lg:items-end">
