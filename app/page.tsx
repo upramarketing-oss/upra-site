@@ -107,12 +107,34 @@ export default function HomePage() {
       {/* ============== SERVICES (versão detalhada igual ao /servicos) ============== */}
       <section className="border-t border-rule px-5 sm:px-6 lg:px-10 py-16 lg:py-28">
         <div className="mx-auto max-w-[1320px]">
-          <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 mb-10 lg:mb-20">
-            <div className="lg:col-span-4">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 mb-10 lg:mb-16 lg:items-end">
+            <div className="lg:col-span-7">
               <div className="label mb-4">Serviços</div>
-              <h2 className="display text-4xl md:text-5xl lg:text-6xl">
-                O que fazemos.
+              <h2 className="display text-4xl md:text-5xl lg:text-6xl leading-[0.95]">
+                O que <span className="text-blue">fazemos.</span>
               </h2>
+            </div>
+            <div className="lg:col-span-5">
+              <p className="text-lg lg:text-xl text-ink/80 leading-relaxed mb-6">
+                Criamos websites pensados para{" "}
+                <span className="text-ink font-semibold">vender</span>, com
+                design e identidade visual desenhados à medida do seu
+                negócio.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-bg-bright border border-rule text-[11px] font-mono uppercase tracking-widest text-ink/85">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue inline-block" />
+                  3 tipos de site
+                </span>
+                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-bg-bright border border-rule text-[11px] font-mono uppercase tracking-widest text-ink/85">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue inline-block" />
+                  8 itens incluídos
+                </span>
+                <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-bg-bright border border-rule text-[11px] font-mono uppercase tracking-widest text-ink/85">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue inline-block" />
+                  Lançamento em 1-3 sem
+                </span>
+              </div>
             </div>
           </div>
 
