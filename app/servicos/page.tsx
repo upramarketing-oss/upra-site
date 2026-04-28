@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ContactForm } from "../components/ContactForm";
+import { EmailLink } from "../components/EmailLink";
 import { WA_MEETING } from "../lib/contact";
 
 export const metadata: Metadata = {
@@ -229,12 +230,10 @@ export default function ServicosPage() {
               </p>
               <div className="mt-8 pt-6 border-t border-rule">
                 <div className="label mb-2">Ou diretamente</div>
-                <a
-                  href="mailto:geral@upramarketing.pt"
+                <EmailLink
+                  email="geral@upramarketing.pt"
                   className="font-mono text-sm text-blue hover:text-blue-deep link-line"
-                >
-                  geral@upramarketing.pt
-                </a>
+                />
               </div>
             </div>
 

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ContactForm } from "./components/ContactForm";
+import { EmailLink } from "./components/EmailLink";
 import { WA_MEETING } from "./lib/contact";
 
 const WEBSITE_TYPES = [
@@ -39,6 +40,17 @@ const WEBSITE_TYPES = [
       "Cupões e promoções",
     ],
   },
+];
+
+const WEBSITE_INCLUDED = [
+  "Mobile-first (rápido em telemóvel)",
+  "SEO local (Google, Maps e Reviews)",
+  "Formulário com integração WhatsApp ou email",
+  "Analytics para saber quem visita o site",
+  "Painel simples para editar texto e imagens",
+  "Hosting e domínio configurados por nós",
+  "Certificado SSL (cadeado verde) incluído",
+  "Suporte 30 dias após lançamento",
 ];
 
 const REASONS = [
@@ -92,49 +104,102 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ============== SERVICES PREVIEW ============== */}
+      {/* ============== SERVICES (versão detalhada igual ao /servicos) ============== */}
       <section className="border-t border-rule px-5 sm:px-6 lg:px-10 py-16 lg:py-28">
         <div className="mx-auto max-w-[1320px]">
-          <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 mb-10 lg:mb-16">
-            <div className="lg:col-span-7">
+          <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 mb-10 lg:mb-20">
+            <div className="lg:col-span-4">
               <div className="label mb-4">Serviços</div>
-              <h2 className="display text-4xl md:text-5xl lg:text-6xl mb-5 leading-[0.95]">
-                O que <span className="text-blue">fazemos.</span>
+              <h2 className="display text-4xl md:text-5xl lg:text-6xl">
+                O que fazemos.
               </h2>
-              <p className="text-lg lg:text-xl text-ink/80 leading-relaxed max-w-xl">
-                Criamos websites pensados para vender, com design e identidade
-                visual desenhados à medida do seu negócio.
-              </p>
-            </div>
-            <div className="lg:col-span-5 flex lg:justify-end lg:items-end">
-              <Link
-                href="/servicos"
-                className="inline-flex items-center gap-2 px-6 py-3.5 lg:px-7 lg:py-4 bg-ink text-bg-bright rounded-full font-medium hover:bg-blue transition-colors with-arrow"
-              >
-                Ver todos os serviços <span className="arrow">→</span>
-              </Link>
             </div>
           </div>
 
-          {/* 3 tipos de sites — cards compactos */}
-          <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
-            {WEBSITE_TYPES.map((type) => (
-              <Link
-                key={type.title}
-                href="/servicos"
-                className="bg-bg-bright border border-rule rounded-2xl p-7 lg:p-8 hover:border-blue transition-colors group"
-              >
-                <h3 className="display text-2xl lg:text-3xl mb-3 group-hover:text-blue transition-colors">
-                  {type.title}
+          {/* Featured: Criação de Websites — o serviço principal */}
+          <article
+            id="criacao-websites"
+            className="card border-blue bg-blue-soft p-6 sm:p-8 lg:p-12 mb-5 lg:mb-6 hover:border-blue-deep scroll-mt-8 lg:scroll-mt-12"
+          >
+            <div className="grid lg:grid-cols-12 gap-10 lg:gap-14">
+              <div className="lg:col-span-7">
+                <div className="mb-6">
+                  <span className="label !text-blue !tracking-widest">
+                    ★ Serviço principal
+                  </span>
+                </div>
+                <h3 className="display-tight text-4xl md:text-5xl lg:text-6xl mb-5 leading-[0.95]">
+                  Criação de Websites
                 </h3>
-                <p className="text-[15px] text-mute leading-relaxed mb-5">
-                  {type.body}
+                <p className="text-lg lg:text-xl text-ink/80 leading-relaxed max-w-xl mb-8">
+                  O mundo é digital, e os seus clientes também. É{" "}
+                  <span className="text-blue font-semibold">online</span> que
+                  se procuram serviços, comparam preços e tomam decisões. Ter
+                  um website já não é um luxo, mas sim uma{" "}
+                  <span className="text-blue font-semibold">obrigação</span>{" "}
+                  para{" "}
+                  <span className="text-blue font-semibold">destacar</span> o
+                  seu negócio!
                 </p>
-                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-blue">
-                  Saber mais <span aria-hidden>→</span>
-                </span>
-              </Link>
-            ))}
+                <div className="border-t border-blue/30 pt-6">
+                  <div className="label mb-4 !text-blue-deep">
+                    Incluído em todos os projetos
+                  </div>
+                  <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm text-ink/80">
+                    {WEBSITE_INCLUDED.map((item) => (
+                      <li key={item} className="flex items-start gap-2">
+                        <span className="text-blue mt-0.5">→</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="lg:col-span-5 flex flex-col gap-3">
+                <div className="label mb-1">Tipos de sites</div>
+                {WEBSITE_TYPES.map((type) => (
+                  <div
+                    key={type.title}
+                    className="bg-bg-bright border border-rule rounded-2xl p-5 lg:p-6 hover:border-blue transition-colors"
+                  >
+                    <h4 className="display text-xl lg:text-2xl mb-2">
+                      {type.title}
+                    </h4>
+                    <p className="text-sm lg:text-[15px] text-mute leading-relaxed">
+                      {type.body}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Design + logo: faixa em largura total */}
+            <div
+              id="design-logo"
+              className="mt-8 lg:mt-10 flex items-start gap-4 p-5 lg:p-6 bg-bg-bright border border-blue/40 rounded-xl scroll-mt-8 lg:scroll-mt-12"
+            >
+              <span className="text-blue text-2xl leading-none mt-0.5 shrink-0">
+                ★
+              </span>
+              <p className="text-sm lg:text-[15px] text-ink/85 leading-relaxed">
+                <span className="font-semibold text-blue-deep">
+                  Design e logo
+                </span>{" "}
+                feitos à medida do seu negócio. Criamos a paleta de cores, a
+                tipografia e a identidade visual de raiz, sem usar templates.
+              </p>
+            </div>
+          </article>
+
+          {/* CTA — para conhecer preços e plano mensal */}
+          <div className="text-center mt-10 lg:mt-12">
+            <Link
+              href="/precos"
+              className="inline-flex items-center gap-2 px-7 py-4 bg-ink text-bg-bright rounded-full font-medium hover:bg-blue transition-colors with-arrow"
+            >
+              Ver preços e plano mensal <span className="arrow">→</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -209,12 +274,10 @@ export default function HomePage() {
               </p>
               <div className="mt-8 pt-6 border-t border-rule">
                 <div className="label mb-2">Ou diretamente</div>
-                <a
-                  href="mailto:geral@upramarketing.pt"
+                <EmailLink
+                  email="geral@upramarketing.pt"
                   className="font-mono text-sm text-blue hover:text-blue-deep link-line"
-                >
-                  geral@upramarketing.pt
-                </a>
+                />
               </div>
             </div>
 

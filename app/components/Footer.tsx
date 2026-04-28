@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
 import { CookiesButton } from "./CookiesButton";
+import { EmailLink } from "./EmailLink";
 
 const FOOTER_LINKS = [
   {
@@ -84,12 +85,12 @@ export function Footer() {
               Construímos a presença digital de pequenas e médias empresas
               locais em Portugal.
             </p>
-            <a
-              href="mailto:geral@upramarketing.pt"
-              className="mt-5 inline-block font-mono text-sm text-blue hover:text-blue-deep link-line"
-            >
-              geral@upramarketing.pt
-            </a>
+            <span className="mt-5 inline-block">
+              <EmailLink
+                email="geral@upramarketing.pt"
+                className="font-mono text-sm text-blue hover:text-blue-deep link-line"
+              />
+            </span>
 
             {/*
               IDENTIFICAÇÃO LEGAL — obrigatória por lei (DL 7/2004, art. 10º)

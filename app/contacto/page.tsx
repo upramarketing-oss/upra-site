@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactForm } from "../components/ContactForm";
+import { EmailLink } from "../components/EmailLink";
 
 export const metadata: Metadata = {
   title: "Contacto",
@@ -43,12 +44,10 @@ export default function ContactoPage() {
               <div className="mt-8 pt-6 border-t border-rule space-y-5">
                 <div>
                   <div className="label mb-2">Email</div>
-                  <a
-                    href="mailto:geral@upramarketing.pt"
+                  <EmailLink
+                    email="geral@upramarketing.pt"
                     className="font-mono text-sm text-blue hover:text-blue-deep link-line"
-                  >
-                    geral@upramarketing.pt
-                  </a>
+                  />
                 </div>
                 <div>
                   <div className="label mb-2">Onde nos encontra</div>
