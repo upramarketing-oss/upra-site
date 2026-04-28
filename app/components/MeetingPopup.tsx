@@ -250,7 +250,6 @@ export function MeetingPopup() {
               href={WA_MEETING}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={dismiss}
               className="inline-flex items-center justify-center gap-2 w-full px-5 py-3 border border-ink/15 text-ink rounded-full font-medium hover:bg-ink hover:text-bg-bright transition-colors text-[15px]"
             >
               Falar agora no WhatsApp
