@@ -106,7 +106,16 @@ export default function HomePage() {
 
       {/* ============== SERVICES (versão detalhada igual ao /servicos) ============== */}
       <section className="border-t border-rule px-5 sm:px-6 lg:px-10 py-16 lg:py-28">
-        <div className="mx-auto max-w-[1320px]">
+        <div className="mx-auto max-w-[1320px] relative">
+          {/* Mascote UPRA — desktop only, ancorada ao topo direito a sobrepor o cartao */}
+          <img
+            src="/mascote.png"
+            alt="Mascote UPRA"
+            width={400}
+            height={400}
+            className="hidden lg:block absolute right-2 xl:right-8 top-2 lg:top-4 w-56 xl:w-64 2xl:w-72 z-20 pointer-events-none select-none drop-shadow-2xl"
+          />
+
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 mb-10 lg:mb-16 lg:items-end">
             <div className="lg:col-span-7">
               <div className="label mb-4">Serviços</div>
@@ -114,7 +123,7 @@ export default function HomePage() {
                 O que <span className="text-blue">fazemos.</span>
               </h2>
             </div>
-            {/* Espaço reservado para a mascote da UPRA — a adicionar quando estiver criada */}
+            {/* Coluna direita ocupada pela mascote (absolute) */}
             <div className="lg:col-span-5 hidden lg:block" />
           </div>
 
