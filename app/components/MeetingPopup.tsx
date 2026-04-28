@@ -6,7 +6,7 @@ import { WA_MEETING } from "../lib/contact";
 
 const STORAGE_KEY = "upra-meeting-popup-dismissed";
 const DELAY_MS = 30_000; // 30 segundos
-const PATHS_TO_SKIP = ["/contacto"];
+const PATHS_TO_SKIP: string[] = []; // /contacto foi removido — popup aparece em todas as paginas
 
 const WEB3FORMS_KEY =
   process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? "MISSING_WEB3FORMS_KEY";

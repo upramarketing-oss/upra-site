@@ -289,6 +289,41 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ============== DARK CTA (final) ============== */}
+      <section className="border-t border-rule px-5 sm:px-6 lg:px-10 py-16 lg:py-24 bg-ink text-bg-bright">
+        <div className="mx-auto max-w-[1320px] grid lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-8">
+            <div className="label !text-bg-bright/55 mb-4">
+              Não encontra o que procura?
+            </div>
+            <h2 className="display-tight text-3xl md:text-5xl lg:text-6xl leading-[0.95]">
+              Cada projeto é{" "}
+              <span className="text-blue">único.</span>
+            </h2>
+            <p className="mt-5 text-lg text-bg-bright/70 max-w-xl leading-relaxed">
+              Conte-nos sobre o seu negócio e devolvemos uma proposta clara
+              em 48 horas, sem compromisso.
+            </p>
+          </div>
+          <div className="lg:col-span-4 lg:justify-self-end flex flex-wrap gap-3">
+            <a
+              href={WA_MEETING}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-4 bg-blue text-bg-bright rounded-full font-medium hover:bg-blue-deep transition-colors with-arrow"
+            >
+              Pedir orçamento <span className="arrow">→</span>
+            </a>
+            <Link
+              href="#formulario"
+              className="inline-flex items-center gap-2 px-6 py-4 border border-bg-bright/30 text-bg-bright rounded-full hover:bg-bg-bright hover:text-ink transition-colors"
+            >
+              Formulário
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
