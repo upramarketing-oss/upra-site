@@ -112,25 +112,28 @@ export function Footer() {
           <div className="flex flex-wrap justify-center md:justify-end gap-x-5 gap-y-2 text-sm text-mute order-1 md:order-2">
             <Link
               href="/politica-privacidade"
-              className="hover:text-ink transition-colors"
+              className="link-line hover:text-ink transition-colors"
             >
               Política de privacidade
             </Link>
-            <Link href="/termos" className="hover:text-ink transition-colors">
+            <Link
+              href="/termos"
+              className="link-line hover:text-ink transition-colors"
+            >
               Termos e Condições
             </Link>
             <Link
               href="/cookies"
-              className="hover:text-ink transition-colors"
+              className="link-line hover:text-ink transition-colors"
             >
               Política de cookies
             </Link>
-            <CookiesButton className="hover:text-ink transition-colors" />
+            <CookiesButton className="link-line hover:text-ink transition-colors" />
             <a
               href="https://www.livroreclamacoes.pt/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-ink transition-colors"
+              className="link-line hover:text-ink transition-colors"
             >
               Livro de reclamações
             </a>
