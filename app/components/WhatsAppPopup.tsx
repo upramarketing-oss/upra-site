@@ -38,7 +38,7 @@ export function WhatsAppPopup() {
         </div>
 
         <p className="text-sm text-ink/85 leading-relaxed mb-4">
-          Vamos falar do seu futuro site? Estamos aqui no WhatsApp.
+          Vamos falar do seu futuro site? Sem compromisso.
         </p>
 
         <a
