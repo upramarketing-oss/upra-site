@@ -48,12 +48,11 @@ async function getPrivacyPolicyContent(): Promise<string | null> {
       )
       // Remover noscript
       .replace(/<noscript[\s\S]*?<\/noscript>/gi, "")
-      // Remover imagens placeholder (peças puzzle pretas) — quando o serviço
-      // de terceiros não tem logo customizado, iubenda usa um SVG genérico
-      .replace(
-        /<img[^>]*src="[^"]*default_thirdparty_icon[^"]*"[^>]*>/gi,
-        ""
-      )
+      // Remover TODAS as <img> — logos de terceiros (Google G, Meta, etc.)
+      // são decorativos. O texto é que importa para a política.
+      // Isto também resolve o problema dos S3 presigned URLs que expiram
+      // em 7 dias e caem em fallback puzzle preto.
+      .replace(/<img[^>]*\/?>/gi, "")
       // Remover ícones SVG inline soltos (triângulos ▼ etc.)
       .replace(/<svg[^>]*>[\s\S]*?<\/svg>/gi, "");
 

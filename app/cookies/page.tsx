@@ -39,10 +39,7 @@ async function getCookiePolicyContent(): Promise<string | null> {
         ""
       )
       .replace(/<noscript[\s\S]*?<\/noscript>/gi, "")
-      .replace(
-        /<img[^>]*src="[^"]*default_thirdparty_icon[^"]*"[^>]*>/gi,
-        ""
-      )
+      .replace(/<img[^>]*\/?>/gi, "")
       .replace(/<svg[^>]*>[\s\S]*?<\/svg>/gi, "");
 
     return content;
