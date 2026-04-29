@@ -15,12 +15,41 @@ export const revalidate = 86400;
 async function getPrivacyPolicyContent(): Promise<string | null> {
   try {
     const res = await fetch(
-      `https://www.iubenda.com/api/privacy-policy/${IUBENDA_PRIVACY_ID}/no-markup`,
-      { next: { revalidate: 86400 } }
+      `https://www.iubenda.com/privacy-policy/${IUBENDA_PRIVACY_ID}`,
+      {
+        next: { revalidate: 86400 },
+        headers: {
+          // Pretend a normal browser para nao receber pagina diferente
+          "User-Agent":
+            "Mozilla/5.0 (compatible; UPRA-Site/1.0; +https://upra.pt)",
+        },
+      }
     );
     if (!res.ok) return null;
-    const data = await res.json();
-    return data?.content ?? null;
+    const html = await res.text();
+
+    // Extrair conteudo dentro de <main>...</main>
+    const mainMatch = html.match(/<main[^>]*>([\s\S]*?)<\/main>/i);
+    if (!mainMatch) return null;
+    let content = mainMatch[1];
+
+    // Limpar elementos indesejados
+    content = content
+      // Remover scripts inline (segurança + design)
+      .replace(/<script[\s\S]*?<\/script>/gi, "")
+      // Remover styles inline
+      .replace(/<style[\s\S]*?<\/style>/gi, "")
+      // Remover branding iubenda
+      .replace(/<[^>]*class="[^"]*iubenda-branding[^"]*"[^>]*>[\s\S]*?<\/[^>]+>/gi, "")
+      // Remover botões de gestão de preferências
+      .replace(
+        /<[^>]*class="[^"]*iub-manage-preferences[^"]*"[^>]*>[\s\S]*?<\/[^>]+>/gi,
+        ""
+      )
+      // Remover noscript
+      .replace(/<noscript[\s\S]*?<\/noscript>/gi, "");
+
+    return content;
   } catch {
     return null;
   }

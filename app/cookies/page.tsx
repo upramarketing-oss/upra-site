@@ -14,12 +14,33 @@ export const revalidate = 86400;
 async function getCookiePolicyContent(): Promise<string | null> {
   try {
     const res = await fetch(
-      `https://www.iubenda.com/api/privacy-policy/${IUBENDA_PRIVACY_ID}/cookie-policy/no-markup`,
-      { next: { revalidate: 86400 } }
+      `https://www.iubenda.com/privacy-policy/${IUBENDA_PRIVACY_ID}/cookie-policy`,
+      {
+        next: { revalidate: 86400 },
+        headers: {
+          "User-Agent":
+            "Mozilla/5.0 (compatible; UPRA-Site/1.0; +https://upra.pt)",
+        },
+      }
     );
     if (!res.ok) return null;
-    const data = await res.json();
-    return data?.content ?? null;
+    const html = await res.text();
+
+    const mainMatch = html.match(/<main[^>]*>([\s\S]*?)<\/main>/i);
+    if (!mainMatch) return null;
+    let content = mainMatch[1];
+
+    content = content
+      .replace(/<script[\s\S]*?<\/script>/gi, "")
+      .replace(/<style[\s\S]*?<\/style>/gi, "")
+      .replace(/<[^>]*class="[^"]*iubenda-branding[^"]*"[^>]*>[\s\S]*?<\/[^>]+>/gi, "")
+      .replace(
+        /<[^>]*class="[^"]*iub-manage-preferences[^"]*"[^>]*>[\s\S]*?<\/[^>]+>/gi,
+        ""
+      )
+      .replace(/<noscript[\s\S]*?<\/noscript>/gi, "");
+
+    return content;
   } catch {
     return null;
   }
