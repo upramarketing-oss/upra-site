@@ -47,7 +47,15 @@ async function getPrivacyPolicyContent(): Promise<string | null> {
         ""
       )
       // Remover noscript
-      .replace(/<noscript[\s\S]*?<\/noscript>/gi, "");
+      .replace(/<noscript[\s\S]*?<\/noscript>/gi, "")
+      // Remover imagens placeholder (peças puzzle pretas) — quando o serviço
+      // de terceiros não tem logo customizado, iubenda usa um SVG genérico
+      .replace(
+        /<img[^>]*src="[^"]*default_thirdparty_icon[^"]*"[^>]*>/gi,
+        ""
+      )
+      // Remover ícones SVG inline soltos (triângulos ▼ etc.)
+      .replace(/<svg[^>]*>[\s\S]*?<\/svg>/gi, "");
 
     return content;
   } catch {

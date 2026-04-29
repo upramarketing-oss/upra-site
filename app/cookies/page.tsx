@@ -38,7 +38,12 @@ async function getCookiePolicyContent(): Promise<string | null> {
         /<[^>]*class="[^"]*iub-manage-preferences[^"]*"[^>]*>[\s\S]*?<\/[^>]+>/gi,
         ""
       )
-      .replace(/<noscript[\s\S]*?<\/noscript>/gi, "");
+      .replace(/<noscript[\s\S]*?<\/noscript>/gi, "")
+      .replace(
+        /<img[^>]*src="[^"]*default_thirdparty_icon[^"]*"[^>]*>/gi,
+        ""
+      )
+      .replace(/<svg[^>]*>[\s\S]*?<\/svg>/gi, "");
 
     return content;
   } catch {
