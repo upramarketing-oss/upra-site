@@ -376,7 +376,8 @@ body {
 
 /* Iubenda específico — disfarçar branding e ajustar elementos próprios */
 .iubenda-content .iub_footer,
-.iubenda-content .iubenda_legal_doc_brand {
+.iubenda-content .iubenda_legal_doc_brand,
+.iubenda-content .iubenda-branding {
   display: none;
 }
 .iubenda-content .iub_container,
@@ -388,4 +389,71 @@ body {
 .iubenda-content [class*=" iub_"] {
   font-family: inherit;
   color: inherit;
+}
+
+/* Esconder ícones placeholder feios da iubenda (peças puzzle pretas
+   que aparecem quando o serviço de terceiros não tem logo customizado) */
+.iubenda-content img[src*="default_thirdparty_icon"] {
+  display: none;
+}
+
+/* Imagens reais (logos de marcas como Google G colorido) ficam pequenas e alinhadas */
+.iubenda-content img[width="32"],
+.iubenda-content img[alt][width] {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5em;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Estilizar elementos <details> (caixas expansíveis) — substituir o "▼" feio
+   por um "+" / "−" elegante a azul */
+.iubenda-content details {
+  margin: 0.75em 0;
+  border: 1px solid var(--color-rule);
+  border-radius: 0.5rem;
+  background: var(--color-bg);
+  padding: 0;
+}
+.iubenda-content summary {
+  padding: 0.75em 1em;
+  padding-right: 2.5em;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--color-ink);
+  list-style: none;
+  position: relative;
+  user-select: none;
+}
+.iubenda-content summary::-webkit-details-marker,
+.iubenda-content summary::marker {
+  display: none;
+  content: "";
+}
+.iubenda-content summary::after {
+  content: "+";
+  position: absolute;
+  right: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-blue);
+  font-size: 1.4em;
+  font-weight: 600;
+  line-height: 1;
+  transition: transform 200ms ease;
+}
+.iubenda-content details[open] summary::after {
+  content: "−";
+}
+.iubenda-content details > *:not(summary) {
+  padding: 0 1em 1em 1em;
+}
+
+/* Esconder o triângulo ▼ que aparece sozinho sem contexto */
+.iubenda-content > p:has(> svg),
+.iubenda-content [class*="expand-arrow"],
+.iubenda-content [class*="expand-toggle"] {
+  display: none;
 }
