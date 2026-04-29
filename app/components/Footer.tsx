@@ -23,7 +23,7 @@ const FOOTER_LINKS = [
   {
     heading: "Redes sociais",
     links: [
-      { label: "Instagram", href: "https://www.instagram.com/upramarketing" },
+      { label: "Instagram", href: "https://www.instagram.com/upra.pt/" },
       { label: "Facebook", href: "https://www.facebook.com/upramarketing" },
       { label: "LinkedIn", href: "https://www.linkedin.com/company/upramarketing" },
     ],
