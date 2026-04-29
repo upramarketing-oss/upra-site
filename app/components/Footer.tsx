@@ -94,12 +94,13 @@ export function Footer() {
 
             {/*
               IDENTIFICAÇÃO LEGAL — obrigatória por lei (DL 7/2004, art. 10º)
-              Substitua os placeholders quando tiver os dados reais.
+              ENI: João Pedro Muchacho Ferreira · NIF 276 230 469
+              Atividade aberta em 2026-04-28 (doc. 9996N01860429)
             */}
             <div className="mt-6 pt-5 border-t border-rule/60 w-full max-w-sm space-y-1 font-mono text-[11px] lg:text-xs text-mute uppercase tracking-widest">
-              <div>UPRA · NIF [a definir]</div>
+              <div>UPRA · NIF 276 230 469</div>
               <div className="normal-case tracking-normal text-mute/90 font-normal text-[12px] lg:text-[13px]">
-                Morada: [a definir]
+                Empresário em Nome Individual · Portugal
               </div>
             </div>
           </div>
