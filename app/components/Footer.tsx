@@ -8,8 +8,8 @@ const FOOTER_LINKS = [
     heading: "Serviços",
     links: [
       { label: "Websites", href: "/servicos#criacao-websites" },
-      { label: "Lojas Online", href: "/precos#loja-online" },
       { label: "Landing Pages", href: "/precos#landing-page" },
+      { label: "Lojas Online", href: "/precos#loja-online" },
     ],
   },
   {

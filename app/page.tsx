@@ -5,18 +5,6 @@ import { WA_MEETING } from "./lib/contact";
 
 const WEBSITE_TYPES = [
   {
-    title: "Sites Institucionais",
-    body: "Ideal para profissionais e PMEs estabelecidas que querem credibilidade online. A casa do seu negócio na web.",
-    features: [
-      "Página de apresentação",
-      "Serviços detalhados",
-      "Equipa + testemunhos",
-      "Contactos + mapa",
-      "Blog ou secção de notícias",
-      "Galeria ou portefólio",
-    ],
-  },
-  {
     title: "Landing Pages",
     body: "Página única, focada em converter. Para campanhas, lançamentos, captação de leads ou um produto específico.",
     features: [
@@ -26,6 +14,18 @@ const WEBSITE_TYPES = [
       "FAQ integrado",
       "Pixel Meta / Google Ads",
       "A/B testing preparado",
+    ],
+  },
+  {
+    title: "Sites Institucionais",
+    body: "Ideal para profissionais e PMEs estabelecidas que querem credibilidade online. A casa do seu negócio na web.",
+    features: [
+      "Página de apresentação",
+      "Serviços detalhados",
+      "Equipa + testemunhos",
+      "Contactos + mapa",
+      "Blog ou secção de notícias",
+      "Galeria ou portefólio",
     ],
   },
   {
