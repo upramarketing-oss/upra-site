@@ -186,13 +186,7 @@ export default function ServicosPage() {
                   <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-mono uppercase tracking-widest font-semibold bg-blue/15 text-blue mb-4">
                     Tudo incluído
                   </span>
-                  <div className="flex items-baseline gap-2 mb-6">
-                    <span className="display-tight text-5xl lg:text-6xl font-bold leading-none">
-                      €49
-                    </span>
-                    <span className="text-xl text-ink/60">/mês</span>
-                  </div>
-                  <ul className="space-y-2.5 text-[15px] text-ink/85">
+                  <ul className="space-y-2.5 text-[15px] text-ink/85 mb-6">
                     {[
                       "Hosting + domínio",
                       "Certificado SSL",
@@ -206,6 +200,12 @@ export default function ServicosPage() {
                       </li>
                     ))}
                   </ul>
+                  <Link
+                    href="/precos"
+                    className="inline-flex items-center justify-center gap-2 w-full px-5 py-3 bg-blue text-bg-bright rounded-full font-medium hover:bg-blue-deep transition-colors with-arrow"
+                  >
+                    Ver preços <span className="arrow">→</span>
+                  </Link>
                 </div>
               </div>
             </div>

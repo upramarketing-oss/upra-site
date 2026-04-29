@@ -209,7 +209,7 @@ export default function HomePage() {
               href="/precos"
               className="inline-flex items-center gap-2 px-7 py-4 bg-ink text-bg-bright rounded-full font-medium hover:bg-blue transition-colors with-arrow"
             >
-              Ver preços e plano mensal <span className="arrow">→</span>
+              Ver preços <span className="arrow">→</span>
             </Link>
           </div>
         </div>
