@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Política de Cookies",
@@ -8,7 +7,27 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://upra.pt/cookies" },
 };
 
-export default function CookiesPage() {
+const IUBENDA_PRIVACY_ID = "11176512";
+
+export const revalidate = 86400;
+
+async function getCookiePolicyContent(): Promise<string | null> {
+  try {
+    const res = await fetch(
+      `https://www.iubenda.com/api/privacy-policy/${IUBENDA_PRIVACY_ID}/cookie-policy/no-markup`,
+      { next: { revalidate: 86400 } }
+    );
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data?.content ?? null;
+  } catch {
+    return null;
+  }
+}
+
+export default async function CookiesPage() {
+  const content = await getCookiePolicyContent();
+
   return (
     <>
       {/* HERO */}
@@ -29,36 +48,29 @@ export default function CookiesPage() {
         </div>
       </section>
 
-      {/* IUBENDA EMBED */}
+      {/* TEXTO COMPLETO DA POLITICA DE COOKIES — vindo do iubenda */}
       <section className="border-t border-rule px-5 sm:px-6 lg:px-10 py-16 lg:py-24 bg-bg-soft">
         <div className="mx-auto max-w-[900px]">
           <div className="bg-bg-bright border border-rule rounded-2xl p-7 sm:p-10 lg:p-14">
-            <a
-              href="https://www.iubenda.com/privacy-policy/11176512/cookie-policy"
-              className="iubenda-white no-brand iubenda-noiframe iubenda-embed iubenda-noiframe"
-              title="Política de Cookies"
-            >
-              Política de Cookies
-            </a>
-            <Script id="iubenda-cookie-loader" strategy="afterInteractive">
-              {`
-                (function (w,d) {
-                  var loader = function () {
-                    var s = d.createElement("script"),
-                        tag = d.getElementsByTagName("script")[0];
-                    s.src="https://cdn.iubenda.com/iubenda.js";
-                    tag.parentNode.insertBefore(s,tag);
-                  };
-                  if(w.addEventListener) {
-                    w.addEventListener("load", loader, false);
-                  } else if(w.attachEvent) {
-                    w.attachEvent("onload", loader);
-                  } else {
-                    w.onload = loader;
-                  }
-                })(window, document);
-              `}
-            </Script>
+            {content ? (
+              <article
+                className="iubenda-content prose-upra"
+                dangerouslySetInnerHTML={{ __html: content }}
+              />
+            ) : (
+              <div className="text-mute italic text-center py-8">
+                Não foi possível carregar a política. Pode consultá-la
+                directamente em{" "}
+                <a
+                  href={`https://www.iubenda.com/privacy-policy/${IUBENDA_PRIVACY_ID}/cookie-policy`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue hover:text-blue-deep underline"
+                >
+                  iubenda.com →
+                </a>
+              </div>
+            )}
           </div>
         </div>
       </section>

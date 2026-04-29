@@ -254,3 +254,138 @@ body {
     animation: none;
   }
 }
+
+/* ============================================================
+   PROSE-UPRA — estilos para conteúdo HTML injectado (iubenda etc.)
+   Mantém a estética do site sem usar @tailwindcss/typography.
+   ============================================================ */
+.prose-upra {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  line-height: 1.7;
+  font-size: 16px;
+}
+.prose-upra h1,
+.prose-upra h2,
+.prose-upra h3,
+.prose-upra h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+  line-height: 1.2;
+  margin-top: 2em;
+  margin-bottom: 0.7em;
+}
+.prose-upra h1 { font-size: 2.25rem; }
+.prose-upra h2 { font-size: 1.6rem; padding-top: 0.5em; border-top: 1px solid var(--color-rule); }
+.prose-upra h2:first-child { padding-top: 0; border-top: 0; margin-top: 0; }
+.prose-upra h3 { font-size: 1.25rem; }
+.prose-upra h4 { font-size: 1.05rem; }
+.prose-upra p {
+  margin-bottom: 1em;
+  color: var(--color-ink-soft);
+}
+.prose-upra ul,
+.prose-upra ol {
+  margin-bottom: 1em;
+  padding-left: 1.5rem;
+}
+.prose-upra ul { list-style: none; }
+.prose-upra ul > li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.4em;
+  color: var(--color-ink-soft);
+}
+.prose-upra ul > li::before {
+  content: "→";
+  color: var(--color-blue);
+  position: absolute;
+  left: 0;
+  font-weight: 600;
+}
+.prose-upra ol { list-style: decimal; }
+.prose-upra ol > li {
+  margin-bottom: 0.4em;
+  color: var(--color-ink-soft);
+}
+.prose-upra a {
+  color: var(--color-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose-upra a:hover {
+  color: var(--color-blue-deep);
+}
+.prose-upra strong,
+.prose-upra b {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+.prose-upra em,
+.prose-upra i {
+  font-style: italic;
+}
+.prose-upra hr {
+  border: 0;
+  border-top: 1px solid var(--color-rule);
+  margin: 2.5em 0;
+}
+.prose-upra blockquote {
+  border-left: 3px solid var(--color-blue);
+  background: var(--color-blue-soft);
+  padding: 1em 1.25em;
+  margin: 1.5em 0;
+  border-radius: 0.5rem;
+}
+.prose-upra blockquote p {
+  margin: 0;
+}
+.prose-upra code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--color-bg-soft);
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+}
+.prose-upra pre {
+  background: var(--color-bg-soft);
+  padding: 1em;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.5em 0;
+}
+.prose-upra table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-size: 0.95em;
+}
+.prose-upra th,
+.prose-upra td {
+  border: 1px solid var(--color-rule);
+  padding: 0.6em 0.8em;
+  text-align: left;
+}
+.prose-upra th {
+  background: var(--color-bg-soft);
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+/* Iubenda específico — disfarçar branding e ajustar elementos próprios */
+.iubenda-content .iub_footer,
+.iubenda-content .iubenda_legal_doc_brand {
+  display: none;
+}
+.iubenda-content .iub_container,
+.iubenda-content .iub_content {
+  padding: 0;
+  margin: 0;
+}
+.iubenda-content [class^="iub_"],
+.iubenda-content [class*=" iub_"] {
+  font-family: inherit;
+  color: inherit;
+}
